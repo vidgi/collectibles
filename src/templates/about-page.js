@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
+import "@google/model-viewer/dist/model-viewer";
 
 // eslint-disable-next-line
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
@@ -11,16 +12,29 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   return (
     <section className="section section--gradient">
       <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-            </div>
+      <div className="has-text-weight-light is-size-3">virtualdreamer’s <br></br> time capsule</div>
+        {/* <div className="columns"> */}
+          {/* <div className="column is-10"> */}
+          <div id="card">
+            {(typeof window !== 'undefined') ? (
+                <model-viewer
+                src="/obj1.glb"
+                ios-src=""
+                alt="obj1"
+                shadow-intensity="1"
+                camera-controls
+                auto-rotate
+                ar
+              ></model-viewer>
+            ) : null}
           </div>
-        </div>
+          <div className="has-text-weight-light is-size-6">
+            requested November 15, 2021 at 4:52 pm
+            <br></br>
+            delivered Dec 1st at 11:59 pm
+            </div>
+          {/* </div> */}
+        {/* </div> */}
       </div>
     </section>
   );

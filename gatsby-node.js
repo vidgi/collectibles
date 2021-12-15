@@ -85,3 +85,20 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 }
+
+exports.onCreateWebpackConfig = ({ stage, rules, loaders, actions }) => {
+  switch (stage) {
+    case 'build-html':
+      actions.setWebpackConfig({
+        module: {
+          rules: [
+            {
+              test: /@google\/model-viewer/,
+              use: [loaders.null()]
+            }
+          ]
+        }
+      });
+      break;
+  }
+};

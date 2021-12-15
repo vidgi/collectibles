@@ -1,17 +1,44 @@
 @import "~bulma/sass/utilities/initial-variables"
+@import url(https://fonts.googleapis.com/css?family=Sora:200,400,600,800)
 
 // Config vars
 // Kaldi logo brand color: #FD461E
 $kaldi-red: #D64000
 $kaldi-red-invert: #fff
 
+$body-font: 'Sora', sans-serif
+
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
 $body-color: #333
 $black: #2b2523
 
+html
+  background-color: #eeeeee !important
+  width: 100% !important
+  height: 100% !important
+
+h1, h2, h3, h4
+  color: #484646 !important
+
+body 
+  font-family: $body-font !important
+  background-color: #eeeeee !important
+  width: 100% !important
+  height: 100% !important
+  scrollbar-width: none
+
 .navbar .navbar-menu
   box-shadow: none !important
+  color: #484646 !important
+
+.container navbar-brand
+  color: #484646 !important
+
+.navbar
+  border-bottom: 3px double #484646
+  background-color: #eeeeee !important
+
 
 .content .taglist
   list-style: none
@@ -123,6 +150,19 @@ $menu-label-color: $white-ter
   margin: 0 1.5em 0 0
 
 
+#card 
+  margin: 3em auto
+  display: flex
+  flex-direction: column
+  border-radius: 6px
+  overflow: hidden
+
+
+model-viewer
+  width: 100%
+  height: 400px
+
+
 @import "~bulma"
 
 
@@ -138,3 +178,4 @@ $menu-label-color: $white-ter
     text-align: center
     max-width: 70%
     margin: 0 0 1em
+

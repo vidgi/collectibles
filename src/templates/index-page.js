@@ -22,49 +22,34 @@ export const IndexPageTemplate = ({
 
   return (
     <div>
-      <FullWidthImage img={heroImage} title={title} subheading={subheading} />
+      {/* <FullWidthImage img={heroImage} title={title} subheading={subheading} /> */}
       <section className="section section--gradient">
         <div className="container">
           <div className="section">
             <div className="columns">
-              <div className="column is-10 is-offset-1">
+              <div className="column">
                 <div className="content">
-                  <div className="content">
-                    <div className="tile">
-                      <h1 className="title">{mainpitch.title}</h1>
-                    </div>
-                    <div className="tile">
-                      <h3 className="subtitle">{mainpitch.description}</h3>
-                    </div>
+                  <div className="content has-text-weight-light is-size-5">
+                      Consumer goods and digital products have trended towards ideas of personalization and the individual and receiving things in an instant. This work intervenes on concepts of personal data and the digital world through the creation of delayed digital sculptures formed in response to feelings and dreams.
                   </div>
-                  <div className="columns">
-                    <div className="column is-12">
-                      <h3 className="has-text-weight-semibold is-size-2">
-                        {heading}
-                      </h3>
-                      <p>{description}</p>
-                    </div>
-                  </div>
-                  <Features gridItems={intro.blurbs} />
-                  <div className="columns">
-                    <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/products">
-                        See all products
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      Latest stories
-                    </h3>
-                    <BlogRoll />
-                    <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/blog">
-                        Read more
-                      </Link>
-                    </div>
-                  </div>
+                  <div className="content has-text-weight-light is-size-5">
+                  As our virtual entities become more individualized and isolated, how can we find and create <i>community</i> and <i>collectiveness</i>?                  </div>
                 </div>
+                <Link to="/about">
+                <button className="button is-light has-text-weight-light">
+                    view community →
+                  </button>  
+                  </Link>
+                  <span>&nbsp;&nbsp;</span>
+
+                  <Link to="/contact">
+                  <button className="button is-light has-text-weight-light">
+                    request capsule →
+                  </button>
+                  </Link>
+
+              </div>
+              <div className="column is-offset-1">
               </div>
             </div>
           </div>

@@ -38,8 +38,21 @@ export default class Index extends React.Component {
       <Layout>
         <section className="section">
           <div className="container">
+          <div className="columns">
+            <div className="column">
             <div className="content">
-              <h1>Contact</h1>
+              <div className="has-text-weight-light is-size-3">request your <br></br> time capsule</div>
+              <br></br>
+              <div className="has-text-weight-light is-size-5">
+              You can submit your responses to be processed into a virtual time capsule that will be sent to your email address at some unknown, unspecified time in the future. 
+              <br></br>
+              <br></br>
+              Each capsule will be uniquely designed for each individual response and will be added to the digital community of capsules over time. 
+              </div>
+              <br></br>
+              </div></div>
+              <div className="column is-offset-1">
+              <div className="content">
               <form
                 name="contact"
                 method="post"
@@ -57,8 +70,8 @@ export default class Index extends React.Component {
                   </label>
                 </div>
                 <div className="field">
-                  <label className="label" htmlFor={"name"}>
-                    Your name
+                  <label className="has-text-weight-light" htmlFor={"name"}>
+                    time capsule screenname
                   </label>
                   <div className="control">
                     <input
@@ -72,8 +85,8 @@ export default class Index extends React.Component {
                   </div>
                 </div>
                 <div className="field">
-                  <label className="label" htmlFor={"email"}>
-                    Email
+                  <label className="has-text-weight-light" htmlFor={"email"}>
+                    email
                   </label>
                   <div className="control">
                     <input
@@ -87,8 +100,8 @@ export default class Index extends React.Component {
                   </div>
                 </div>
                 <div className="field">
-                  <label className="label" htmlFor={"message"}>
-                    Message
+                  <label className="has-text-weight-light" htmlFor={"message"}>
+                    what is your dream?
                   </label>
                   <div className="control">
                     <textarea
@@ -101,11 +114,13 @@ export default class Index extends React.Component {
                   </div>
                 </div>
                 <div className="field">
-                  <button className="button is-link" type="submit">
-                    Send
+                  <button className="button is-light has-text-weight-light" type="submit">
+                    submit →
                   </button>
                 </div>
               </form>
+            </div>
+            </div>
             </div>
           </div>
         </section>

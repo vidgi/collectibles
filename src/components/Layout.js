@@ -14,7 +14,7 @@ const TemplateWrapper = ({ children }) => {
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
-
+        <link href="https://fonts.googleapis.com/css?family=Sora:200,400,600,800" rel="stylesheet"/>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -50,7 +50,7 @@ const TemplateWrapper = ({ children }) => {
       </Helmet>
       <Navbar />
       <div>{children}</div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
