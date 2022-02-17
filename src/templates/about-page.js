@@ -12,7 +12,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   return (
     <section className="section section--gradient">
       <div className="container">
-      <div className="has-text-weight-light is-size-3">virtualdreamer’s <br></br> time capsule</div>
+      <div className="has-text-weight-light is-size-3">dreamer<br></br>digital gemstone</div>
         {/* <div className="columns"> */}
           {/* <div className="column is-10"> */}
           <div id="card">
@@ -29,9 +29,9 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
             ) : null}
           </div>
           <div className="has-text-weight-light is-size-6">
-            requested November 15, 2021 at 4:52 pm
+            (description of object)
             <br></br>
-            delivered Dec 1st at 11:59 pm
+            (other details)
             </div>
           {/* </div> */}
         {/* </div> */}

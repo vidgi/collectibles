@@ -30,21 +30,22 @@ export const IndexPageTemplate = ({
               <div className="column">
                 <div className="content">
                   <div className="content has-text-weight-light is-size-5">
-                      Consumer goods and digital products have trended towards ideas of personalization and the individual and receiving things in an instant. This work intervenes on concepts of personal data and the digital world through the creation of delayed digital sculptures formed in response to feelings and dreams.
+                    <i>collectibles </i> are items worth far more than they are originally sold for, most commonly based on it's appraised rarity and popularity.
                   </div>
                   <div className="content has-text-weight-light is-size-5">
-                  As our virtual entities become more individualized and isolated, how can we find and create <i>community</i> and <i>collectiveness</i>?                  </div>
+                    <i>collectibles </i> are items worth far more than they are originally sold for, most commonly based on it's appraised rarity and popularity.
+                  </div>
                 </div>
                 <Link to="/about">
                 <button className="button is-light has-text-weight-light">
-                    view community →
+                    random object →
                   </button>  
                   </Link>
                   <span>&nbsp;&nbsp;</span>
 
-                  <Link to="/contact">
+                  <Link to="/about">
                   <button className="button is-light has-text-weight-light">
-                    request capsule →
+                    random collection →
                   </button>
                   </Link>
 

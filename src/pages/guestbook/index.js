@@ -41,28 +41,25 @@ export default class Index extends React.Component {
           <div className="columns">
             <div className="column">
             <div className="content">
-              <div className="has-text-weight-light is-size-3">request your <br></br> time capsule</div>
+              <div className="has-text-weight-light is-size-3">sign the<br></br>guestbook</div>
               <br></br>
               <div className="has-text-weight-light is-size-5">
-              You can submit your responses to be processed into a virtual time capsule that will be sent to your email address at some unknown, unspecified time in the future. 
-              <br></br>
-              <br></br>
-              Each capsule will be uniquely designed for each individual response and will be added to the digital community of capsules over time. 
+              If you have checked this project out, feel free to leave me a comment, and it will be added to the collection :) 
               </div>
               <br></br>
               </div></div>
               <div className="column is-offset-1">
               <div className="content">
               <form
-                name="contact"
+                name="guestbook"
                 method="post"
-                action="/contact/thanks/"
+                action="/guestbook/thanks/"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}
               >
                 {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="form-name" value="guestbook" />
                 <div hidden>
                   <label>
                     Don’t fill this out:{" "}
@@ -71,7 +68,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="field">
                   <label className="has-text-weight-light" htmlFor={"name"}>
-                    time capsule screenname
+                    name
                   </label>
                   <div className="control">
                     <input
@@ -101,7 +98,7 @@ export default class Index extends React.Component {
                 </div>
                 <div className="field">
                   <label className="has-text-weight-light" htmlFor={"message"}>
-                    what is your dream?
+                    comment
                   </label>
                   <div className="control">
                     <textarea

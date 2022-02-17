@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "time capsule",
+    title: "collectibles",
     description:
-      "time capsule community project",
+      "exploring collectibility and that which makes an object of value and interest",
   },
   plugins: [
     "gatsby-plugin-react-helmet",

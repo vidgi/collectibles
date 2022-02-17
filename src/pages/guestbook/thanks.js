@@ -7,8 +7,11 @@ export default () => (
     <section className="section">
       <div className="container">
         <div className="content">
-          <h1>Thank you!</h1>
-          <p>This is a custom thank you page for form submissions</p>
+          <div className="has-text-weight-light is-size-3">you have signed the guestbook</div>
+              <br></br>
+              <div className="has-text-weight-light is-size-5">
+              thanks for the comment! :)
+              </div>
         </div>
       </div>
     </section>
