@@ -47,7 +47,6 @@ export const BlogPostTemplate = ({
                 src={filename}
                 ios-src=''
                 alt={filename}
-                poster={featuredimage}
                 shadow-intensity='1'
                 camera-controls
                 auto-rotate
