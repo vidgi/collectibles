@@ -12,6 +12,7 @@ export const BlogPostTemplate = ({
   content,
   contentComponent,
   filename,
+  featuredimage,
   description,
   tags,
   title,
@@ -46,6 +47,7 @@ export const BlogPostTemplate = ({
                 src={filename}
                 ios-src=''
                 alt={filename}
+                poster={featuredimage}
                 shadow-intensity='1'
                 camera-controls
                 auto-rotate
@@ -94,6 +96,7 @@ const BlogPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         filename={post.frontmatter.filename}
+        featuredimage={post.frontmatter.featuredimage}
         description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate='%s | collectibles'>
@@ -127,6 +130,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         filename
+        featuredimage
         description
         tags
       }
