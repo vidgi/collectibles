@@ -9,16 +9,14 @@ class TagRoute extends React.Component {
     const postLinks = posts.map((post) => (
       <li key={post.node.fields.slug}>
         <Link to={post.node.fields.slug}>
-          <h2 className="is-size-2">{post.node.frontmatter.title}</h2>
+          <h2 className="has-text-weight-light is-size-4">{post.node.frontmatter.title}</h2>
         </Link>
       </li>
     ));
     const tag = this.props.pageContext.tag;
     const title = this.props.data.site.siteMetadata.title;
     const totalCount = this.props.data.allMarkdownRemark.totalCount;
-    const tagHeader = `${totalCount} post${
-      totalCount === 1 ? "" : "s"
-    } tagged with “${tag}”`;
+    const tagHeader = `collection: ${tag}`;
 
     return (
       <Layout>
@@ -30,11 +28,13 @@ class TagRoute extends React.Component {
                 className="column is-10 is-offset-1"
                 style={{ marginBottom: "6rem" }}
               >
-                <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
+                <div className='has-text-weight-light is-size-3'>
+                  {tagHeader}
+                </div>
                 <ul className="taglist">{postLinks}</ul>
-                <p>
-                  <Link to="/tags/">Browse all tags</Link>
-                </p>
+                <div className='has-text-weight-light is-size-3'>
+                  <Link to="/collections/">view all collections</Link>
+                </div>
               </div>
             </div>
           </div>
