@@ -11,29 +11,13 @@ export const AboutPageTemplate = ({ object, content, contentComponent }) => {
 
   return (
     <section className='section section--gradient'>
-      <div className='container'>
+      <div className='container content'>
         <div className='has-text-weight-light is-size-3'>
-          dreamer<br></br>digital gemstone
+          about
         </div>
-        {/* <div className="columns"> */}
-        {/* <div className="column is-10"> */}
-        <div id='card'>
-          {typeof window !== 'undefined' ? (
-            <model-viewer
-              src={object}
-              ios-src=''
-              alt={object}
-              shadow-intensity='1'
-              camera-controls
-              auto-rotate
-              ar
-            ></model-viewer>
-          ) : null}
-        </div>
+        <br></br>
         <div className='has-text-weight-light is-size-6'>
-          (description of object)
-          <br></br>
-          (other details)
+        <PageContent className="content" content={content} />
         </div>
         {/* </div> */}
         {/* </div> */}

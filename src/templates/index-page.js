@@ -4,9 +4,7 @@ import { Link, graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
-import Features from "../components/Features";
-import BlogRoll from "../components/BlogRoll";
-import FullWidthImage from "../components/FullWidthImage";
+// import FullWidthImage from "../components/FullWidthImage";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -32,18 +30,18 @@ export const IndexPageTemplate = ({
                   <div className="content has-text-weight-light is-size-5">
                     <i>collectibles </i> are items worth far more than they are originally sold for, most commonly based on it's appraised rarity and popularity.
                   </div>
-                  <div className="content has-text-weight-light is-size-5">
+                  {/* <div className="content has-text-weight-light is-size-5">
                     <i>collectibles </i> are items worth far more than they are originally sold for, most commonly based on it's appraised rarity and popularity.
-                  </div>
+                  </div> */}
                 </div>
-                <Link to="/about">
+                <Link to="/collectible/ringless-honey-mushroom/">
                 <button className="button is-light has-text-weight-light">
                     random object →
                   </button>  
                   </Link>
                   <span>&nbsp;&nbsp;</span>
 
-                  <Link to="/about">
+                  <Link to="/collections/mushrooms/">
                   <button className="button is-light has-text-weight-light">
                     random collection →
                   </button>

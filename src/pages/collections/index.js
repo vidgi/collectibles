@@ -21,7 +21,9 @@ const TagsPage = ({
             className="column is-10 is-offset-1"
             style={{ marginBottom: "6rem" }}
           >
-            <h1 className="title is-size-2 is-bold-light">collections</h1>
+            <div className="has-text-weight-light is-size-3">
+              all collections
+            </div>
             <ul className="taglist">
               {group.map((tag) => (
                 <li key={tag.fieldValue}>
