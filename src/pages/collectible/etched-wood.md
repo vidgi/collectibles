@@ -1,8 +1,8 @@
 ---
 templateKey: blog-post
-title: Etched Wood
+title: etched wood
 filename: /assets/giraffes/etched-wood.glb
-featuredimage: /assets/giraffes/etched-wood.jpg
+featuredimage: /assets/giraffes/etched-wood.png
 description: Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.
 tags:
   - giraffes

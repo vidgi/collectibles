@@ -1,8 +1,8 @@
 ---
 templateKey: blog-post
-title: Serenity
+title: serenity
 filename: /assets/giraffes/serenity.glb
-featuredimage: /assets/giraffes/serenity.jpg
+featuredimage: /assets/giraffes/serenity.png
 description: Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.
 tags:
   - giraffes

@@ -1,8 +1,8 @@
 ---
 templateKey: 'blog-post'
-title: 'Mulch Maids'
+title: 'mulch maids'
 filename: /assets/mushrooms/mulch-maids.glb
-featuredimage: /assets/mushrooms/mulch-maids.jpg
+featuredimage: /assets/mushrooms/mulch-maids.png
 description: Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.
 tags:
   - mushrooms

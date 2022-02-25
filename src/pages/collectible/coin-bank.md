@@ -1,8 +1,8 @@
 ---
 templateKey: blog-post
-title: Coin Bank
+title: coin bank
 filename: /assets/giraffes/coin-bank.glb
-featuredimage: /assets/giraffes/coin-bank.jpg
+featuredimage: /assets/giraffes/coin-bank.png
 description: Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.
 tags:
   - giraffes

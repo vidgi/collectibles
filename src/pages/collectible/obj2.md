@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: obj2
 filename: /assets/gemstones/obj2.glb
-featuredimage: /assets/gemstones/obj2.glb
+featuredimage: /assets/gemstones/obj2.png
 description: Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.
 tags:
   - gemstones

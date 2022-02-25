@@ -30,7 +30,7 @@ export const BlogPostTemplate = ({
                 <ul className='taglist'>
                   {tags.map(tag => (
                     <li key={tag + `tag`}>
-                      collection: <Link to={`/collections/${kebabCase(tag)}/`}>{tag}</Link>
+                      <Link to={`/collections/`}>collections </Link> > <Link to={`/collections/${kebabCase(tag)}/`}>{tag}</Link> > {title}
                     </li>
                   ))}
                 </ul>
@@ -44,9 +44,12 @@ export const BlogPostTemplate = ({
           <div id='card'>
             {typeof window !== 'undefined' ? (
               <model-viewer
+                id="reveal" 
+                loading="eager"
                 src={filename}
                 ios-src=''
-                alt={filename}
+                alt={title}
+                poster={featuredimage}
                 shadow-intensity='1'
                 camera-controls
                 auto-rotate

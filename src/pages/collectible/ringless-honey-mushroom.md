@@ -1,8 +1,8 @@
 ---
 templateKey: blog-post
-title: Ringless Honey Mushroom
+title: ringless honey mushroom
 filename: /assets/mushrooms/honey.glb
-featuredimage: /assets/mushrooms/honey.jpg
+featuredimage: /assets/mushrooms/honey.png
 description: Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.
 tags:
   - mushrooms

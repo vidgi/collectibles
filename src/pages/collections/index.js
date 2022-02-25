@@ -22,13 +22,19 @@ const TagsPage = ({
             style={{ marginBottom: "6rem" }}
           >
             <div className="has-text-weight-light is-size-3">
-              all collections
+              collections
             </div>
             <ul className="taglist">
               {group.map((tag) => (
                 <li key={tag.fieldValue}>
                   <Link to={`/collections/${kebabCase(tag.fieldValue)}/`}>
-                    {tag.fieldValue} ({tag.totalCount})
+                  <img
+                    src={`/assets/collections/${tag.fieldValue}.png`}
+                    objectFit={"cover"}
+                    style={{ height: 250, width: 250,}}
+                    alt={tag.fieldValue}
+                    />
+                    <h2 className="has-text-weight-light is-size-4">{tag.fieldValue} ({tag.totalCount})</h2>
                   </Link>
                 </li>
               ))}
