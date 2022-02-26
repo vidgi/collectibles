@@ -21,7 +21,7 @@ const TagsPage = ({
             className="column is-10"
             style={{ marginBottom: "6rem" }}
           >
-            <div className="has-text-weight-light is-size-3">
+            <div className="has-text-weight-normal is-size-4">
               collections
             </div>
             <ul className="taglist">
@@ -34,7 +34,7 @@ const TagsPage = ({
                     style={{ height: 250, width: '100%',}}
                     alt={tag.fieldValue}
                     />
-                    <h2 className="has-text-weight-light is-size-4">{tag.fieldValue} ({tag.totalCount})</h2>
+                    <h2 className="has-text-weight-normal is-size-6">{tag.fieldValue} ({tag.totalCount})</h2>
                   </Link>
                 </li>
               ))}

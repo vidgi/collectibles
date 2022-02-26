@@ -7,9 +7,9 @@ export default () => (
     <section className="section">
       <div className="container">
         <div className="content">
-          <div className="has-text-weight-light is-size-3">you have signed the guestbook</div>
+          <div className="has-text-weight-normal is-size-4">you have signed the guestbook</div>
               <br></br>
-              <div className="has-text-weight-light is-size-5">
+              <div className="has-text-weight-normal is-size-6">
               thanks for the comment! :)
               </div>
         </div>

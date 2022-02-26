@@ -41,9 +41,9 @@ export default class Index extends React.Component {
           <div className="columns">
             <div className="column">
             <div className="content">
-              <div className="has-text-weight-light is-size-3">sign the<br></br>guestbook</div>
+              <div className="has-text-weight-normal is-size-4">sign the<br></br>guestbook</div>
               <br></br>
-              <div className="has-text-weight-light is-size-5">
+              <div className="has-text-weight-normal is-size-6">
               If you have checked this project out, feel free to leave me a comment, and it will be added to the collection :) 
               </div>
               <br></br>
@@ -67,7 +67,7 @@ export default class Index extends React.Component {
                   </label>
                 </div>
                 <div className="field">
-                  <label className="has-text-weight-light" htmlFor={"name"}>
+                  <label className="has-text-weight-normal" htmlFor={"name"}>
                     name
                   </label>
                   <div className="control">
@@ -82,7 +82,7 @@ export default class Index extends React.Component {
                   </div>
                 </div>
                 <div className="field">
-                  <label className="has-text-weight-light" htmlFor={"email"}>
+                  <label className="has-text-weight-normal" htmlFor={"email"}>
                     email
                   </label>
                   <div className="control">
@@ -97,7 +97,7 @@ export default class Index extends React.Component {
                   </div>
                 </div>
                 <div className="field">
-                  <label className="has-text-weight-light" htmlFor={"message"}>
+                  <label className="has-text-weight-normal" htmlFor={"message"}>
                     comment
                   </label>
                   <div className="control">
@@ -111,7 +111,7 @@ export default class Index extends React.Component {
                   </div>
                 </div>
                 <div className="field">
-                  <button className="button is-light has-text-weight-light" type="submit">
+                  <button className="button is-light has-text-weight-normal" type="submit">
                     submit →
                   </button>
                 </div>

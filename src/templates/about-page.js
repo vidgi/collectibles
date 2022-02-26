@@ -12,11 +12,11 @@ export const AboutPageTemplate = ({ object, content, contentComponent }) => {
   return (
     <section className='section section--gradient'>
       <div className='container content'>
-        <div className='has-text-weight-light is-size-3'>
+        <div className='has-text-weight-normal is-size-4'>
           about
         </div>
         <br></br>
-        <div className='has-text-weight-light is-size-6'>
+        <div className='has-text-weight-normal is-size-6'>
         <PageContent className="content" content={content} />
         </div>
         {/* </div> */}

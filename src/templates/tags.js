@@ -21,7 +21,7 @@ class TagRoute extends React.Component {
         style={{ height: 250, width: '100%',}}
         alt={post.node.frontmatter.title}
         />
-        <h2 className="has-text-weight-light is-size-4">{post.node.frontmatter.title}</h2>
+        <h2 className="has-text-weight-normal is-size-6">{post.node.frontmatter.title}</h2>
         </Link>
       </li>
     ));
@@ -36,11 +36,11 @@ class TagRoute extends React.Component {
                 className="column is-10"
                 style={{ marginBottom: "6rem" }}
               >
-                <div className='has-text-weight-light is-size-3'>
+                <div className='has-text-weight-normal is-size-4'>
                   {tagHeader}
                 </div>
                 <ul className="taglist">{postLinks}</ul>
-                <div className='has-text-weight-light is-size-3'>
+                <div className='has-text-weight-normal is-size-4'>
                   <Link to="/collections/">view all collections</Link>
                 </div>
               </div>

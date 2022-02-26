@@ -36,7 +36,7 @@ export const BlogPostTemplate = ({
                 </ul>
               </div>
             ) : null}
-          <div className='has-text-weight-light is-size-3'>
+          <div className='has-text-weight-normal is-size-3'>
             {title}
           </div>
           {/* <div className="columns"> */}
@@ -57,20 +57,20 @@ export const BlogPostTemplate = ({
               ></model-viewer>
             ) : null}
           </div>
-          <div className='has-text-weight-normal is-size-6'>
+          <div className='has-text-weight-normal is-size-4'>
             about the collectible
           </div>
           <br></br>
-          <div className='has-text-weight-light is-size-6'>
+          <div className='has-text-weight-normal is-size-6'>
             {description} 
           </div>
 
           <br></br>
-          <div className='has-text-weight-normal is-size-6'>
+          <div className='has-text-weight-normal is-size-4'>
             more information
           </div>
           <br></br>
-          <div className='has-text-weight-light is-size-6'>
+          <div className='has-text-weight-normal is-size-6'>
             <PostContent content={content} />
           </div>
           {/* </div> */}

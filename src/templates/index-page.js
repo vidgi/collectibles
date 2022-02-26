@@ -27,7 +27,7 @@ export const IndexPageTemplate = ({
             <div className="columns">
               <div className="column">
                 <div className="content">
-                  <div className="content has-text-weight-light is-size-5">
+                  <div className="content has-text-weight-normal is-size-6">
                     <i>collectibles </i> are items worth far more than they are originally sold for, most commonly based on it's appraised rarity and popularity.
                   </div>
                   {/* <div className="content has-text-weight-light is-size-5">
@@ -35,14 +35,14 @@ export const IndexPageTemplate = ({
                   </div> */}
                 </div>
                 <Link to="/collectible/ringless-honey-mushroom/">
-                <button className="button is-light has-text-weight-light">
+                <button className="button is-light has-text-weight-normal">
                     random object →
                   </button>  
                   </Link>
                   <span>&nbsp;&nbsp;</span>
 
                   <Link to="/collections/mushrooms/">
-                  <button className="button is-light has-text-weight-light">
+                  <button className="button is-light has-text-weight-normal">
                     random collection →
                   </button>
                   </Link>
