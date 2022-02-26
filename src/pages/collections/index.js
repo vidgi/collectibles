@@ -30,8 +30,7 @@ const TagsPage = ({
                   <Link to={`/collections/${kebabCase(tag.fieldValue)}/`}>
                   <img
                     src={`/assets/collections/${tag.fieldValue}.png`}
-                    objectFit={"cover"}
-                    style={{ height: 250, width: '100%',}}
+                    style={{ height: 250}}
                     alt={tag.fieldValue}
                     />
                     <h2 className="has-text-weight-normal is-size-6">{tag.fieldValue} ({tag.totalCount})</h2>

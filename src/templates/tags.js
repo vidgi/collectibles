@@ -17,8 +17,7 @@ class TagRoute extends React.Component {
         <Link to={post.node.fields.slug}>
         <img
         src={post.node.frontmatter.featuredimage}
-        objectFit={"cover"}
-        style={{ height: 250, width: '100%',}}
+        style={{ height: 250}}
         alt={post.node.frontmatter.title}
         />
         <h2 className="has-text-weight-normal is-size-6">{post.node.frontmatter.title}</h2>
