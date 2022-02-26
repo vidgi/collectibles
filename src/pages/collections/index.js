@@ -31,7 +31,7 @@ const TagsPage = ({
                   <img
                     src={`/assets/collections/${tag.fieldValue}.png`}
                     objectFit={"cover"}
-                    style={{ height: 250, width: 250,}}
+                    style={{ height: 250, width: '100%',}}
                     alt={tag.fieldValue}
                     />
                     <h2 className="has-text-weight-light is-size-4">{tag.fieldValue} ({tag.totalCount})</h2>
