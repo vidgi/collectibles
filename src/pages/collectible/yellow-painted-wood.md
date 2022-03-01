@@ -3,6 +3,7 @@ templateKey: blog-post
 title: yellow painted wood
 filename: /assets/giraffes/yelow-painted-wood.glb
 featuredimage: /assets/giraffes/yellow-painted-wood.png
+initialposition: -252.7deg 65.96deg auto
 description: Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.
 tags:
   - giraffes

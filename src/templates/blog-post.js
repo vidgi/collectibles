@@ -13,6 +13,7 @@ export const BlogPostTemplate = ({
   contentComponent,
   filename,
   featuredimage,
+  initialposition,
   description,
   tags,
   title,
@@ -54,6 +55,7 @@ export const BlogPostTemplate = ({
                 camera-controls
                 auto-rotate
                 ar
+                camera-orbit={initialposition}
               ></model-viewer>
             ) : null}
           </div>
@@ -84,6 +86,7 @@ BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   filename: PropTypes.string,
+  initialposition: PropTypes.string,
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object
@@ -99,6 +102,7 @@ const BlogPost = ({ data }) => {
         contentComponent={HTMLContent}
         filename={post.frontmatter.filename}
         featuredimage={post.frontmatter.featuredimage}
+        initialposition={post.frontmatter.initialposition}
         description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate='%s | collectibles'>
@@ -133,6 +137,7 @@ export const pageQuery = graphql`
         title
         filename
         featuredimage
+        initialposition
         description
         tags
       }

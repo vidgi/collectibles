@@ -3,6 +3,7 @@ templateKey: blog-post
 title: yellow puppet
 filename: /assets/giraffes/yellow-puppet.glb
 featuredimage: /assets/giraffes/yellow-puppet.png
+initialposition: -252.7deg 65.96deg auto
 description: Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.
 tags:
   - giraffes
