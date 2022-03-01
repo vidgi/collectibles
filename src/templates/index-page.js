@@ -3,6 +3,10 @@ import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 // import { getImage } from "gatsby-plugin-image";
 
+import { Canvas } from "@react-three/fiber"
+import { Suspense } from "react";
+import Scene from "../components/Scene";
+
 import Layout from "../components/Layout";
 // import FullWidthImage from "../components/FullWidthImage";
 
@@ -47,6 +51,18 @@ export const IndexPageTemplate = ({
           </div>
         </div>
       </section>
+
+   <div style={{ position: "relative", height: 250 }} className="full-width-image margin-top-0">
+   <Canvas dpr={[1, 2]}>
+    <ambientLight />
+    <pointLight position={[10, 10, 10]} />
+    <Suspense fallback={null}>
+              <Scene position={[0, 0, 0]}/>
+          
+           </Suspense>
+      </Canvas >
+    </div>
+
     </div>
   );
 };
