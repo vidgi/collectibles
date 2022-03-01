@@ -12,6 +12,7 @@ export const AboutPageTemplate = ({ object, content, contentComponent }) => {
   return (
     <section className='section section--gradient'>
       <div className='container content'>
+      <div className='section'>
         <div className='has-text-weight-normal is-size-4'>
           about
         </div>
@@ -19,7 +20,7 @@ export const AboutPageTemplate = ({ object, content, contentComponent }) => {
         <div className='has-text-weight-normal is-size-6'>
         <PageContent className="content" content={content} />
         </div>
-        {/* </div> */}
+        </div>
         {/* </div> */}
       </div>
     </section>

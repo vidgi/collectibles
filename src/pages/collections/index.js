@@ -13,16 +13,17 @@ const TagsPage = ({
   },
 }) => (
   <Layout>
-    <section className="section">
+    <section className="container content">
       <Helmet title={`collections | ${title}`} />
-      <div className="container content">
+      {/* <div className="container content"> */}
         <div className="columns">
           <div
             className="column is-10"
             style={{ marginBottom: "6rem" }}
           >
-            <div className="has-text-weight-normal is-size-4">
-              collections
+            <br></br>
+            <div className="has-text-weight-normal is-size-3">
+              all collections
             </div>
             <ul className="taglist">
               {group.map((tag) => (
@@ -40,7 +41,7 @@ const TagsPage = ({
             </ul>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </section>
   </Layout>
 );

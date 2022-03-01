@@ -10,7 +10,7 @@ class TagRoute extends React.Component {
     const title = this.props.data.site.siteMetadata.title;
 
     const totalCount = this.props.data.allMarkdownRemark.totalCount;
-    const tagHeader = `collections > ${tag}`;
+    const tagHeader = <div><Link to={`/collections/`}>collections </Link> > {tag} </div>;
 
     const postLinks = posts.map((post) => (
       <li key={post.node.fields.slug}>
@@ -27,24 +27,26 @@ class TagRoute extends React.Component {
    
     return (
       <Layout>
-        <section className="section">
+        <section className="container content">
           <Helmet title={`${tag} | ${title}`} />
-          <div className="container content">
+          {/* <div className="container content"> */}
             <div className="columns">
               <div
                 className="column is-10"
                 style={{ marginBottom: "6rem" }}
               >
-                <div className='has-text-weight-normal is-size-4'>
+                <br></br>
+                <div className='has-text-weight-normal'>
                   {tagHeader}
                 </div>
-                <ul className="taglist">{postLinks}</ul>
-                <div className='has-text-weight-normal is-size-4'>
-                  <Link to="/collections/">view all collections</Link>
+                <br></br>
+                <div className='has-text-weight-normal is-size-3'>
+                  all {tag}
                 </div>
+                <ul className="taglist">{postLinks}</ul>
               </div>
             </div>
-          </div>
+          {/* </div> */}
         </section>
       </Layout>
     );

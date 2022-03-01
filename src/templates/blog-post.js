@@ -22,9 +22,9 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-      <section className='section section--gradient'>
+      <section className='container content'>
         {helmet || ''}
-        <div className='container content'>
+        {/* <div className='container content'> */}
         {tags && tags.length ? (
               <div style={{ marginTop: `0rem` }}>
                 {/* <h4>collection</h4> */}
@@ -75,9 +75,12 @@ export const BlogPostTemplate = ({
           <div className='has-text-weight-normal is-size-6'>
             <PostContent content={content} />
           </div>
+          <br></br>
+          <br></br>
+          <br></br>
           {/* </div> */}
           {/* </div> */}
-        </div>
+        {/* </div> */}
       </section>
   )
 }
