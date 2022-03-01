@@ -9,7 +9,7 @@ class TagRoute extends React.Component {
     const tag = this.props.pageContext.tag;
     const title = this.props.data.site.siteMetadata.title;
 
-    const totalCount = this.props.data.allMarkdownRemark.totalCount;
+    // const totalCount = this.props.data.allMarkdownRemark.totalCount;
     const tagHeader = <div><Link to={`/collections/`}>collections </Link> > {tag} </div>;
 
     const postLinks = posts.map((post) => (
@@ -27,7 +27,7 @@ class TagRoute extends React.Component {
    
     return (
       <Layout>
-        <section className="container content">
+        <section className="section2 container content">
           <Helmet title={`${tag} | ${title}`} />
           {/* <div className="container content"> */}
             <div className="columns">

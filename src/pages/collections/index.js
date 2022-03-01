@@ -13,7 +13,7 @@ const TagsPage = ({
   },
 }) => (
   <Layout>
-    <section className="container content">
+    <section className="section2 container content">
       <Helmet title={`collections | ${title}`} />
       {/* <div className="container content"> */}
         <div className="columns">

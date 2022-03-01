@@ -1,23 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
+// import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
 // import FullWidthImage from "../components/FullWidthImage";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
-  image,
-  title,
-  heading,
-  subheading,
-  mainpitch,
   description,
-  intro,
+  random
 }) => {
-  const heroImage = getImage(image) || image;
-
   return (
     <div>
       {/* <FullWidthImage img={heroImage} title={title} subheading={subheading} /> */}
@@ -30,22 +23,22 @@ export const IndexPageTemplate = ({
                   <div className="content has-text-weight-normal is-size-6">
                     <i>collectibles </i> are items worth far more than they are originally sold for, most commonly based on it's appraised rarity and popularity.
                   </div>
-                  {/* <div className="content has-text-weight-light is-size-5">
-                    <i>collectibles </i> are items worth far more than they are originally sold for, most commonly based on it's appraised rarity and popularity.
-                  </div> */}
+                  <div className="content has-text-weight-normal is-size-6">
+                    {/* {description} */}
+                  </div>
                 </div>
-                <Link to="/collectible/ringless-honey-mushroom/">
+                <Link to={`/collectible/${random}`}>
                 <button className="button is-light has-text-weight-normal">
-                    random object →
+                    random collectible →
                   </button>  
                   </Link>
-                  <span>&nbsp;&nbsp;</span>
+                  {/* <span>&nbsp;&nbsp;</span>
 
                   <Link to="/collections/mushrooms/">
                   <button className="button is-light has-text-weight-normal">
                     random collection →
                   </button>
-                  </Link>
+                  </Link> */}
 
               </div>
               <div className="column is-offset-1">
@@ -59,30 +52,51 @@ export const IndexPageTemplate = ({
 };
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
   description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
 };
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
+  const collectiblesList = [
+    'etched-wood',
+    'audubon-zoo-figurine',
+    'brown-batik-family',
+    'brown-puppet',
+    'cambodian-silk',
+    'christmas',
+    'coconut-spring',
+    'coin-bank',
+    'cute-fruit-pick',
+    'girafa',
+    'golden-milkcap',
+    'happy-meal',
+    'indonesian-batik',
+    'lacquered-wood',
+    'large-standing',
+    'memphis-zigzag-family',
+    'mulch-maids',
+    'orange-figurine',
+    'painted-clay',
+    'red-bow',
+    'red-wooden-batik',
+    'ringless-honey-mushroom',
+    'serenity',
+    'singapore-zoo',
+    'small-batik',
+    'tray',
+    'unknown-zoo-figurine',
+    'wheels',
+    'yellow-painted-wood',
+    'yellow-puppet'];
+
+  const random = Math.floor(Math.random() * collectiblesList.length);
+  const randomURL = collectiblesList[random]
 
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
-        intro={frontmatter.intro}
+        random={randomURL}
       />
     </Layout>
   );
@@ -102,31 +116,7 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        title
-        image {
-          childImageSharp {
-            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-          }
-        }
-        heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
         description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
       }
     }
   }

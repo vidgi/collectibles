@@ -14,6 +14,7 @@ const TemplateWrapper = ({ children }) => {
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
+        <link rel="shortcut icon" href={`${withPrefix("/")}img/favicon.ico`}/>
         <link href="https://fonts.googleapis.com/css?family=Sora:200,400,600,800" rel="stylesheet"/>
         <link
           rel="apple-touch-icon"
@@ -45,7 +46,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta
           property="og:image"
-          content={`${withPrefix("/")}img/og-image.jpg`}
+          content={`${withPrefix("/")}img/og-image.png`}
         />
       </Helmet>
       <Navbar />

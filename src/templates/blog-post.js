@@ -22,7 +22,7 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content
 
   return (
-      <section className='container content'>
+      <section className='section2 container content'>
         {helmet || ''}
         {/* <div className='container content'> */}
         {tags && tags.length ? (
