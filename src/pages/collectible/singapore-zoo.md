@@ -3,7 +3,7 @@ templateKey: blog-post
 title: singapore zoo
 filename: /assets/giraffes/singapore-zoo.glb
 featuredimage: /assets/giraffes/singapore-zoo.png
-initialposition: -252.7deg 65.96deg auto
+initialposition: -1187deg 74.07deg auto
 description: Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.
 tags:
   - giraffes

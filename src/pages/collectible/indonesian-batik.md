@@ -1,9 +1,9 @@
 ---
 templateKey: blog-post
 title: indonesian batik
-filename: /assets/giraffes/batik.glb
-featuredimage: /assets/giraffes/batik.png
-initialposition: -252.7deg 65.96deg auto
+filename: /assets/giraffes/indonesian-batik.glb
+featuredimage: /assets/giraffes/indonesian-batik.png
+initialposition: -48.01deg 72.92deg auto
 description: Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.
 tags:
   - giraffes

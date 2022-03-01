@@ -3,7 +3,7 @@ templateKey: blog-post
 title: happy meal
 filename: /assets/giraffes/happy-meal.glb
 featuredimage: /assets/giraffes/happy-meal.png
-initialposition: -252.7deg 65.96deg auto
+initialposition: -657.2deg 71.74deg auto
 description: Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.
 tags:
   - giraffes

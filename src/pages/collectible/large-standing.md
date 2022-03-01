@@ -3,7 +3,7 @@ templateKey: blog-post
 title: large standing
 filename: /assets/giraffes/large-standing.glb
 featuredimage: /assets/giraffes/large-standing.png
-initialposition: -252.7deg 65.96deg auto
+initialposition: -647.8deg 76.43deg auto
 description: Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.
 tags:
   - giraffes

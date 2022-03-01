@@ -3,7 +3,7 @@ templateKey: blog-post
 title: red wooden batik
 filename: /assets/giraffes/red-wooden-batik.glb
 featuredimage: /assets/giraffes/red-wooden-batik.png
-initialposition: -252.7deg 65.96deg auto
+initialposition: -1128deg 75.83deg auto
 description: Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.
 tags:
   - giraffes

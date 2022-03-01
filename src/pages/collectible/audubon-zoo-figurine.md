@@ -3,7 +3,7 @@ templateKey: blog-post
 title: audubon zoo figurine
 filename: /assets/giraffes/audubon-zoo-figurine.glb
 featuredimage: /assets/giraffes/audubon-zoo-figurine.png
-initialposition: -252.7deg 65.96deg auto
+initialposition: 118.5deg 67.06deg auto
 description: Brewing with a Chemex probably seems like a complicated, time-consuming ordeal, but once you get used to the process, it becomes a soothing ritual that's worth the effort every time.
 tags:
   - giraffes
