@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "collectibles",
+    title: "collectiblr",
     description:
       "exploring collectibility and that which makes an object of value and interest",
   },

@@ -9,7 +9,7 @@ import {
   useFrame,
   extend,
   useThree,
-} from "react-three-fiber";
+} from "@react-three/fiber";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 
@@ -59,7 +59,7 @@ export const IndexPageTemplate = ({
         <div className="container">
           {/* <div className="section"> */}
             <div className="columns">
-              <div className="column">
+              <div className="column is-offset-0">
                 <div className="content">
                   <div className="has-text-weight-normal is-size-6">
                     <i>collectibles </i> are items worth far more than they are originally sold for, most commonly based on it's appraised rarity and popularity.
