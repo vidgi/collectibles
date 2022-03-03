@@ -1,14 +1,51 @@
-import React from "react";
+import React, { Suspense, useRef } from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 // import { getImage } from "gatsby-plugin-image";
 
-import { Canvas } from "@react-three/fiber"
-import { Suspense } from "react";
+import {
+  Canvas,
+  useLoader,
+  useFrame,
+  extend,
+  useThree,
+} from "react-three-fiber";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+
+
 import Scene from "../components/Scene";
 
 import Layout from "../components/Layout";
 // import FullWidthImage from "../components/FullWidthImage";
+extend({ OrbitControls });
+
+
+const CameraControls = () => {
+  // Get a reference to the Three.js Camera, and the canvas html element.
+  // We need these to setup the OrbitControls class.
+  // https://threejs.org/docs/#examples/en/controls/OrbitControls
+
+  const {
+    camera,
+    gl: { domElement },
+  } = useThree();
+
+  // Ref to the controls, so that we can update them on every frame using useFrame
+  const controls = useRef();
+  useFrame((state) => controls.current.update());
+  return (
+    <orbitControls
+      ref={controls}
+      args={[camera, domElement]}
+      enableZoom={false}
+      maxAzimuthAngle={Math.PI / 4}
+      maxPolarAngle={Math.PI}
+      minAzimuthAngle={-Math.PI / 4}
+      minPolarAngle={0}
+    />
+  );
+};
+
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -20,14 +57,14 @@ export const IndexPageTemplate = ({
       {/* <FullWidthImage img={heroImage} title={title} subheading={subheading} /> */}
       <section className="section section--gradient">
         <div className="container">
-          <div className="section">
+          {/* <div className="section"> */}
             <div className="columns">
               <div className="column">
                 <div className="content">
-                  <div className="content has-text-weight-normal is-size-6">
+                  <div className="has-text-weight-normal is-size-6">
                     <i>collectibles </i> are items worth far more than they are originally sold for, most commonly based on it's appraised rarity and popularity.
                   </div>
-                  <div className="content has-text-weight-normal is-size-6">
+                  <div className="has-text-weight-normal is-size-6">
                     {/* {description} */}
                   </div>
                 </div>
@@ -45,23 +82,25 @@ export const IndexPageTemplate = ({
                   </Link> */}
 
               </div>
-              <div className="column is-offset-1">
+              <div className="column">
+              <div style={{ position: "relative", height: 500 }} className="full-width-image margin-top-0">
+              <Canvas dpr={[1, 2]}>
+              <CameraControls />
+                <ambientLight />
+                <pointLight position={[10, 10, 10]} />
+                <Suspense fallback={null}>
+                          <Scene position={[0, 0, 0]}/>
+                      
+                      </Suspense>
+                  </Canvas >
+                </div>
               </div>
             </div>
-          </div>
+          {/* </div> */}
         </div>
       </section>
 
-   <div style={{ position: "relative", height: 250 }} className="full-width-image margin-top-0">
-   <Canvas dpr={[1, 2]}>
-    <ambientLight />
-    <pointLight position={[10, 10, 10]} />
-    <Suspense fallback={null}>
-              <Scene position={[0, 0, 0]}/>
-          
-           </Suspense>
-      </Canvas >
-    </div>
+   
 
     </div>
   );
