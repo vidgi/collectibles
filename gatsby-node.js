@@ -95,21 +95,8 @@ exports.onCreateWebpackConfig = ({ stage, rules, loaders, actions }) => {
             {
               test: /@google\/model-viewer/,
               use: [loaders.null()]
-            }
-          ]
-        }
-      });
-      break;
-  }
-};
-
-exports.onCreateWebpackConfig = ({ stage, rules, loaders, actions }) => {
-  switch (stage) {
-    case 'build-html':
-      actions.setWebpackConfig({
-        module: {
-          rules: [
-             {
+            },
+            {
               test: /\.(glb|gltf)$/,
               use: [
                {
