@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { IndexPageTemplate } from '../../templates/index-page'
+import { ExplorerPageTemplate } from '../../templates/explorer-page'
 
-const IndexPagePreview = ({ entry, getAsset }) => {
+const ExplorerPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
 
   if (data) {
     return (
-      <IndexPageTemplate
+      <ExplorerPageTemplate
         description={data.description}
         content={widgetFor('body')}
       />
@@ -17,11 +17,11 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   }
 }
 
-IndexPagePreview.propTypes = {
+ExplorerPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
   widgetFor: PropTypes.func,
 }
 
-export default IndexPagePreview
+export default ExplorerPagePreview

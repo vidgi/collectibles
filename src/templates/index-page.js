@@ -3,11 +3,10 @@ import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 // import { getImage } from "gatsby-plugin-image";
 import Content, { HTMLContent } from "../components/Content";
-import { Html } from "@react-three/drei"
+import {PresentationControls, Loader } from "@react-three/drei"
 
 import {
   Canvas,
-  useLoader,
   useFrame,
   extend,
   useThree,
@@ -87,49 +86,62 @@ export const IndexPageTemplate = ({
               <div className="column">
               <div style={{ position: "relative", height: 500 }} className="margin-top-0">
               <Canvas dpr={[1, 2]}>
-                <CameraControls />
+                {/* <CameraControls /> */}
+                
+                
                 <ambientLight />
                 {/* <pointLight position={[10, 10, 10]} /> */}
-                <Suspense fallback={
-                  <Html>
-                  <h1>
-                  Loading...
-                  </h1>
-                  </Html>
-                }>
-                  <Scene URL = {'giraffes/small-batik'}  position={[1, 0, 0]} scale = {10}/>
-                  <Scene URL = {'giraffes/large-standing'}  position={[2, 1, -2]} scale = {7} />
-                  <Scene URL = {'giraffes/serenity'}  position={[3, 0, 0]} scale = {10}/>
-                  <Scene URL = {'giraffes/etched-wood'}  position={[7, 0, 1]} scale = {10}/>
-                  <Scene URL = {'giraffes/audubon-zoo-figurine'}  position={[5, 1, -1]} scale = {10} />
-                  <Scene URL = {'giraffes/brown-batik-family'}  position={[6, 0, 0]} scale = {10}/>
-                  <Scene URL = {'giraffes/brown-batik-family'}  position={[6, 0, 0]} scale = {10}/>
-                  <Scene URL = {'giraffes/happy-meal'}  position={[-3, -0.7, 0]} scale = {10}/>
-                  <Scene URL = {'giraffes/christmas'}  position={[7, 3,-0.5 ]} scale = {7}/>
-                  <Scene URL = {'giraffes/coconut-spring'}  position={[-1, 2,-2 ]} scale = {10}/>
-                  <Scene URL = {'giraffes/coin-bank'}  position={[-4, 2,-2 ]} scale = {10}/>
-                  <Scene URL = {'giraffes/cute-fruit-pick'}  position={[-2.5, 2,-3 ]} scale = {10}/>
-                  <Scene URL = {'giraffes/girafa'}  position={[-6, 0,-0.5 ]} scale = {5}/>
-                  <Scene URL = {'giraffes/indonesian-batik'}  position={[-5.5, 1,-2 ]} scale = {10}/>
-                  <Scene URL = {'giraffes/lacquered-wood'}  position={[-3, 0,-3 ]} scale = {10}/>
-                  <Scene URL = {'giraffes/cambodian-silk'}  position={[3.5, 2,-3 ]} scale = {5}/>
-                  <Scene URL = {'giraffes/memphis-zigzag-family'}  position={[5, 2.5,-2 ]} scale = {5}/>
-                  <Scene URL = {'giraffes/orange-figurine'}  position={[-5, 2.5,0 ]} scale = {5}/>
-                  <Scene URL = {'giraffes/painted-clay'}  position={[-5.5, 1.5,-1 ]} scale = {10}/>
-                  <Scene URL = {'giraffes/red-bow'}  position={[1, 2.5,-5 ]} scale = {10}/>
-                  <Scene URL = {'giraffes/red-wooden-batik'}  position={[-8, 1,-1 ]} scale = {5}/>
-                  <Scene URL = {'giraffes/singapore-zoo'}  position={[-2, -1, 0 ]} scale = {10}/>
-                  <Scene URL = {'giraffes/tray'}  position={[-4, 3,-4 ]} scale = {10}/>
-                  <Scene URL = {'giraffes/unknown-zoo-figurine'}  position={[6, 1,-3 ]} scale = {10}/>
-                  <Scene URL = {'giraffes/wheels'}  position={[-7, 0, 0 ]} scale = {5}/>
-                  <Scene URL = {'giraffes/yellow-painted-wood'}  position={[-7, 1,-3 ]} scale = {10}/>
-                  <Scene URL = {'giraffes/yellow-puppet'}  position={[-8, 3,-3 ]} scale = {10}/>
-                  <Scene URL = {'mushrooms/mulch-maids'}  position={[-1, 0, 0 ]} scale = {10}/>
-                  <Scene URL = {'mushrooms/ringless-honey-mushroom'}  position={[5, 2,-4 ]} scale = {5}/>
-                  <Scene URL = {'mushrooms/golden-milkcap'}  position={[7.5, 1, 0 ]} scale = {10}/>
+                <Suspense fallback={null}>
+                <PresentationControls
+                                  global={true} // Spin globally or by dragging the model
+                                  cursor={true} // Whether to toggle cursor style on drag
+                                  snap={true} // Snap-back to center (can also be a spring config)
+                                  speed={1} // Speed factor
+                                  zoom={1} // Zoom factor when half the polar-max is reached
+                                  rotation={[0, 0, 0]} // Default rotation
+                                  polar={[0, Math.PI / 2]} // Vertical limits
+                                  azimuth={[-Infinity, Infinity]} // Horizontal limits
+                                  config = {{ mass: 1, tension: 170, friction: 26 }} // Spring config
+                                >
+                  <Scene URL = {'giraffes/small-batik'}  position={[1, 0, 0]} scale = {10} animate={true}/>
+                  <Scene URL = {'giraffes/large-standing'}  position={[2, 1, -2]} scale = {7} animate={true} />
+                  <Scene URL = {'giraffes/serenity'}  position={[3, 0, 0]} scale = {10} animate={true}/>
+                  <Scene URL = {'giraffes/etched-wood'}  position={[7, 0, 1]} scale = {10} animate={true}/>
+                  <Scene URL = {'giraffes/audubon-zoo-figurine'}  position={[5, 1, -1]} scale = {10} animate={true}/>
+                  <Scene URL = {'giraffes/brown-batik-family'}  position={[6, 0, 0]} scale = {10} animate={true}/>
+                  <Scene URL = {'giraffes/brown-batik-family'}  position={[6, 0, 0]} scale = {10} animate={true}/>
+                  <Scene URL = {'giraffes/happy-meal'}  position={[-3, -0.7, 0]} scale = {10} animate={true}/>
+                  <Scene URL = {'giraffes/christmas'}  position={[7, 3,-0.5 ]} scale = {7} animate={true}/>
+                  <Scene URL = {'giraffes/coconut-spring'}  position={[-1, 2,-2 ]} scale = {10} animate={true}/>
+                  <Scene URL = {'giraffes/coin-bank'}  position={[-4, 2,-2 ]} scale = {10} animate={true}/>
+                  <Scene URL = {'giraffes/cute-fruit-pick'}  position={[-2.5, 2,-3 ]} scale = {10} animate={true}/>
+                  <Scene URL = {'giraffes/girafa'}  position={[-6, 0,-0.5 ]} scale = {5} animate={true}/>
+                  <Scene URL = {'giraffes/indonesian-batik'}  position={[-5.5, 1,-2 ]} scale = {10} animate={true}/>
+                  <Scene URL = {'giraffes/lacquered-wood'}  position={[-3, 0,-3 ]} scale = {10} animate={true}/>
+                  <Scene URL = {'giraffes/cambodian-silk'}  position={[3.5, 2,-3 ]} scale = {5} animate={true}/>
+                  <Scene URL = {'giraffes/memphis-zigzag-family'}  position={[5, 2.5,-2 ]} scale = {5} animate={true}/>
+                  <Scene URL = {'giraffes/orange-figurine'}  position={[-5, 2.5,0 ]} scale = {5} animate={true}/>
+                  <Scene URL = {'giraffes/painted-clay'}  position={[-5.5, 1.5,-1 ]} scale = {10} animate={true}/>
+                  <Scene URL = {'giraffes/red-bow'}  position={[1, 2.5,-5 ]} scale = {10} animate={true}/>
+                  <Scene URL = {'giraffes/red-wooden-batik'}  position={[-8, 1,-1 ]} scale = {5} animate={true}/>
+                  <Scene URL = {'giraffes/singapore-zoo'}  position={[-2, -1, 0 ]} scale = {10} animate={true}/>
+                  <Scene URL = {'giraffes/tray'}  position={[-4, 3,-4 ]} scale = {10} animate={true}/>
+                  <Scene URL = {'giraffes/unknown-zoo-figurine'}  position={[6, 1,-3 ]} scale = {10} animate={true}/>
+                  <Scene URL = {'giraffes/wheels'}  position={[-7, 0, 0 ]} scale = {5} animate={true}/>
+                  <Scene URL = {'giraffes/yellow-painted-wood'}  position={[-7, 1,-3 ]} scale = {10} animate={true}/>
+                  <Scene URL = {'giraffes/yellow-puppet'}  position={[-8, 3,-3 ]} scale = {10} animate={true}/>
+                  <Scene URL = {'mushrooms/mulch-maids'}  position={[-1, 0, 0 ]} scale = {10} animate={true}/>
+                  <Scene URL = {'mushrooms/ringless-honey-mushroom'}  position={[5, 2,-4 ]} scale = {5} animate={true}/>
+                  <Scene URL = {'mushrooms/golden-milkcap'}  position={[7.5, 1, 0 ]} scale = {10} animate={true}/>
+
+                  </PresentationControls>
 
                 </Suspense>
+
+                
               </Canvas >
+              <Loader />
+
               </div>
               </div>
             </div>

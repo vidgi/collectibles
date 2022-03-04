@@ -23,23 +23,17 @@ export default function Scene({ ...props }) {
   const { nodes } = useGLTF(`/assets/${props.URL}.glb`)
   console.log(nodes)
   const ref = useRef()
-
   // const rotationVal = -Math.PI / 2
   // useFrame(() => (rotationVal = rotationVal +0.01))
   // useFrame(() => (mesh.current.rotation.x = mesh.current.rotation.y += 0.01))
   useFrame((state) => {
+    if (props.animate){
     const t = state.clock.getElapsedTime()
-    // ref.current.rotation.x = 5*Math.cos(t/2)/8
     ref.current.rotation.y = t/8
-    // ref.current.rotation.z = -0.2-(1+Math.sin(t/1.5))/4
-    // ref.current.position.z = (2+Math.sin(t/2))/20
-    ref.current.position.x = 1*Math.cos(t/1.6)+2
-
-    // ref.current.position.y = 0
     ref.current.scale.y = 1*Math.sin(t/1.6)+2
     ref.current.scale.x = 1*Math.sin(t/1.6)+2
     ref.current.scale.z = 1*Math.sin(t/1.6)+2
-
+    }
   })
 
   return (
