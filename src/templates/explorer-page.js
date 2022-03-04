@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 // import { getImage } from "gatsby-plugin-image";
 import Content, { HTMLContent } from "../components/Content";
 import { Loader } from "@react-three/drei"
+import '../components/styles.css';
 
 import {
   Canvas,
@@ -33,25 +34,21 @@ const CameraControls = () => {
 
   // Ref to the controls, so that we can update them on every frame using useFrame
   const controls = useRef();
+
   useFrame((state) => controls.current.update());
   return (
     <orbitControls
       ref={controls}
       args={[camera, domElement]}
       enableZoom={true}
-      enableDamping={true}
+      enableRotate={true}
+      enableDamping={false}
       enablePan={true}
-      enableKeys={true}
-      keys={{
-        LEFT: "ArrowLeft", //left arrow
-        UP: "ArrowUp", // up arrow
-        RIGHT: "ArrowRight", // right arrow
-        BOTTOM: "ArrowDown", // down arrow
-      }}
       maxAzimuthAngle={Math.PI}
       maxPolarAngle={2*Math.PI}
       minAzimuthAngle={-Math.PI}
       minPolarAngle={0}
+      listenToKeyEvents={domElement}
     />
   );
 };
@@ -78,7 +75,7 @@ export const ExplorerPageTemplate = ({
                 // {/* </div> */}
               // {/* </div> */}
               // {/* <div className="column"> */}
-              <div style={{ position: "relative", height: 600 }} className="full-width-image margin-top-0">
+              <div style={{ width: '100%', height: '85%', position: 'absolute'}} className="full-width-image margin-top-0">
               <Canvas dpr={[1, 2]}>
                 <CameraControls />
                 

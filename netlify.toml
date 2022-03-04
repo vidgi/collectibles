@@ -5,5 +5,8 @@
   NODE_VERSION = "14.15.0"
   YARN_VERSION = "1.22.4"
   YARN_FLAGS = "--no-ignore-optional"
-
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
 

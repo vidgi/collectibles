@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { ExplorerPageTemplate } from '../../templates/explorer-page'
 
-const ExplorerPagePreview = ({ entry, getAsset }) => {
+const ExplorerPagePreview = ({ entry, widgetFor }) => {
   const data = entry.getIn(['data']).toJS()
 
   if (data) {

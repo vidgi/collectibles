@@ -95,13 +95,13 @@ export const IndexPageTemplate = ({
                 <PresentationControls
                                   global={true} // Spin globally or by dragging the model
                                   cursor={true} // Whether to toggle cursor style on drag
-                                  snap={true} // Snap-back to center (can also be a spring config)
+                                  snap={false} // Snap-back to center (can also be a spring config)
                                   speed={1} // Speed factor
                                   zoom={1} // Zoom factor when half the polar-max is reached
                                   rotation={[0, 0, 0]} // Default rotation
                                   polar={[0, Math.PI / 2]} // Vertical limits
                                   azimuth={[-Infinity, Infinity]} // Horizontal limits
-                                  config = {{ mass: 1, tension: 170, friction: 26 }} // Spring config
+                                  config = {{ mass: 2, tension: 170, friction: 26 }} // Spring config
                                 >
                   <Scene URL = {'giraffes/small-batik'}  position={[1, 0, 0]} scale = {10} animate={true}/>
                   <Scene URL = {'giraffes/large-standing'}  position={[2, 1, -2]} scale = {7} animate={true} />
