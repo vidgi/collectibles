@@ -78,7 +78,7 @@ export const IndexPageTemplate = ({
               <Canvas dpr={[1, 2]}>
                 <CameraControls />
                 <ambientLight />
-                <pointLight position={[10, 10, 10]} />
+                {/* <pointLight position={[10, 10, 10]} /> */}
                 <Suspense fallback={null}>
                   <Scene URL = {'giraffes/small-batik'}  position={[1, 0, 0]} scale = {10}/>
                   <Scene URL = {'giraffes/large-standing'}  position={[2, 1, -2]} scale = {7} />
