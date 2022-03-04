@@ -44,7 +44,7 @@ const randomURL = collectiblesList[random]
 
 export default function Scene({ ...props }) {
 
-  const { nodes } = useGLTF(`/assets/${randomURL}.glb`)
+  const { nodes } = useGLTF(`/assets/${props.URL}.glb`)
   const ref = useRef()
 
   // const rotationVal = -Math.PI / 2
@@ -58,16 +58,16 @@ export default function Scene({ ...props }) {
     // ref.current.position.z = (2+Math.sin(t/2))/20
     // ref.current.position.x = 1
     // ref.current.position.y = 0
-    ref.current.scale.y = 5.8*Math.sin(t/1.6)+9
-    ref.current.scale.x = 5.8*Math.sin(t/1.6)+9
-    ref.current.scale.z = 5.8*Math.sin(t/1.6)+9
+    ref.current.scale.y = 1*Math.sin(t/1.6)+2
+    ref.current.scale.x = 1*Math.sin(t/1.6)+2
+    ref.current.scale.z = 1*Math.sin(t/1.6)+2
 
   })
 
   return (
     <group ref={ref} dispose={null}>
     {/* <group rotation={[rotationVal, 0, 0]} scale={[1, 1, 1]}> */}
-    <mesh geometry={nodes['mesh_0'].geometry} material={nodes['mesh_0'].material} scale={5}> 
+    <mesh geometry={nodes['mesh_0'].geometry} material={nodes['mesh_0'].material} scale={props.scale} position = {props.position}> 
            <meshStandardMaterial
               color={"#000000"}
               wireframe = {true}

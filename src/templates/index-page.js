@@ -37,10 +37,10 @@ const CameraControls = () => {
     <orbitControls
       ref={controls}
       args={[camera, domElement]}
-      enableZoom={false}
-      maxAzimuthAngle={Math.PI / 4}
-      maxPolarAngle={Math.PI}
-      minAzimuthAngle={-Math.PI / 4}
+      enableZoom={true}
+      maxAzimuthAngle={Math.PI}
+      maxPolarAngle={2*Math.PI}
+      minAzimuthAngle={-Math.PI}
       minPolarAngle={0}
     />
   );
@@ -54,7 +54,6 @@ export const IndexPageTemplate = ({
 }) => {
   return (
     <div>
-      {/* <FullWidthImage img={heroImage} title={title} subheading={subheading} /> */}
       <section className="section section--gradient">
         <div className="container">
           {/* <div className="section"> */}
@@ -65,7 +64,7 @@ export const IndexPageTemplate = ({
                     <i>collectibles </i> are items worth far more than they are originally sold for, most commonly based on it's appraised rarity and popularity.
                   </div>
                   <div className="has-text-weight-normal is-size-6">
-                    {/* {description} */}
+                    {description}
                   </div>
                 </div>
                 <Link to={`/collectible/${random}`}>
@@ -73,27 +72,48 @@ export const IndexPageTemplate = ({
                     random collectible →
                   </button>  
                   </Link>
-                  {/* <span>&nbsp;&nbsp;</span>
-
-                  <Link to="/collections/mushrooms/">
-                  <button className="button is-light has-text-weight-normal">
-                    random collection →
-                  </button>
-                  </Link> */}
-
               </div>
               <div className="column">
               <div style={{ position: "relative", height: 500 }} className="full-width-image margin-top-0">
               <Canvas dpr={[1, 2]}>
-              <CameraControls />
+                <CameraControls />
                 <ambientLight />
                 <pointLight position={[10, 10, 10]} />
                 <Suspense fallback={null}>
-                          <Scene position={[0, 0, 0]}/>
-                      
-                      </Suspense>
-                  </Canvas >
-                </div>
+                  <Scene URL = {'giraffes/small-batik'}  position={[1, 0, 0]} scale = {10}/>
+                  <Scene URL = {'giraffes/large-standing'}  position={[2, 1, -2]} scale = {7} />
+                  <Scene URL = {'giraffes/serenity'}  position={[3, 0, 0]} scale = {10}/>
+                  <Scene URL = {'giraffes/etched-wood'}  position={[7, 0, 1]} scale = {10}/>
+                  <Scene URL = {'giraffes/audubon-zoo-figurine'}  position={[5, 1, -1]} scale = {10} />
+                  <Scene URL = {'giraffes/brown-batik-family'}  position={[6, 0, 0]} scale = {10}/>
+                  <Scene URL = {'giraffes/brown-batik-family'}  position={[6, 0, 0]} scale = {10}/>
+                  <Scene URL = {'giraffes/happy-meal'}  position={[-3, -0.7, 0]} scale = {10}/>
+                  <Scene URL = {'giraffes/christmas'}  position={[7, 3,-0.5 ]} scale = {7}/>
+                  <Scene URL = {'giraffes/coconut-spring'}  position={[-1, 2,-2 ]} scale = {10}/>
+                  <Scene URL = {'giraffes/coin-bank'}  position={[-4, 2,-2 ]} scale = {10}/>
+                  <Scene URL = {'giraffes/cute-fruit-pick'}  position={[-2.5, 2,-3 ]} scale = {10}/>
+                  <Scene URL = {'giraffes/girafa'}  position={[-6, 0,-0.5 ]} scale = {5}/>
+                  <Scene URL = {'giraffes/indonesian-batik'}  position={[-5.5, 1,-2 ]} scale = {10}/>
+                  <Scene URL = {'giraffes/lacquered-wood'}  position={[-3, 0,-3 ]} scale = {10}/>
+                  <Scene URL = {'giraffes/cambodian-silk'}  position={[3.5, 2,-3 ]} scale = {5}/>
+                  <Scene URL = {'giraffes/memphis-zigzag-family'}  position={[5, 2.5,-2 ]} scale = {5}/>
+                  <Scene URL = {'giraffes/orange-figurine'}  position={[-5, 2.5,0 ]} scale = {5}/>
+                  <Scene URL = {'giraffes/painted-clay'}  position={[-5.5, 1.5,-1 ]} scale = {10}/>
+                  <Scene URL = {'giraffes/red-bow'}  position={[1, 2.5,-5 ]} scale = {10}/>
+                  <Scene URL = {'giraffes/red-wooden-batik'}  position={[-8, 1,-1 ]} scale = {5}/>
+                  <Scene URL = {'giraffes/singapore-zoo'}  position={[-2, -1, 0 ]} scale = {10}/>
+                  <Scene URL = {'giraffes/tray'}  position={[-4, 3,-4 ]} scale = {10}/>
+                  <Scene URL = {'giraffes/unknown-zoo-figurine'}  position={[6, 1,-3 ]} scale = {10}/>
+                  <Scene URL = {'giraffes/wheels'}  position={[-7, 0, 0 ]} scale = {5}/>
+                  <Scene URL = {'giraffes/yellow-painted-wood'}  position={[-7, 1,-3 ]} scale = {10}/>
+                  <Scene URL = {'giraffes/yellow-puppet'}  position={[-8, 3,-3 ]} scale = {10}/>
+                  <Scene URL = {'mushrooms/mulch-maids'}  position={[-1, 0, 0 ]} scale = {10}/>
+                  <Scene URL = {'mushrooms/ringless-honey-mushroom'}  position={[5, 2,-4 ]} scale = {5}/>
+                  <Scene URL = {'mushrooms/golden-milkcap'}  position={[7.5, 1, 0 ]} scale = {10}/>
+
+                </Suspense>
+              </Canvas >
+              </div>
               </div>
             </div>
           {/* </div> */}
