@@ -2,6 +2,8 @@ import React, { Suspense, useRef } from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 // import { getImage } from "gatsby-plugin-image";
+import Content, { HTMLContent } from "../components/Content";
+import { Html } from "@react-three/drei"
 
 import {
   Canvas,
@@ -50,36 +52,51 @@ const CameraControls = () => {
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
   description,
+  content,
+  contentComponent,
   random
 }) => {
+  const PageContent = contentComponent || Content;
   return (
     <div>
       <section className="section section--gradient">
         <div className="container">
           {/* <div className="section"> */}
             <div className="columns">
-              <div className="column is-offset-0">
+              <div className="column is-3">
                 <div className="content">
                   <div className="has-text-weight-normal is-size-6">
-                    <i>collectibles </i> are items worth far more than they are originally sold for, most commonly based on it's appraised rarity and popularity.
-                  </div>
-                  <div className="has-text-weight-normal is-size-6">
-                    {description}
+                  <PageContent className="content" content={content} />
                   </div>
                 </div>
+                <div className="content">
                 <Link to={`/collectible/${random}`}>
                 <button className="button is-light has-text-weight-normal">
                     random collectible →
                   </button>  
                   </Link>
+                  </div>
+                  <div className="content">
+                  <Link to={`/explorer`}>
+                <button className="button is-light has-text-weight-normal">
+                    collectiblr explorer →
+                  </button>  
+                  </Link>
+                  </div>
               </div>
               <div className="column">
-              <div style={{ position: "relative", height: 500 }} className="full-width-image margin-top-0">
+              <div style={{ position: "relative", height: 500 }} className="margin-top-0">
               <Canvas dpr={[1, 2]}>
                 <CameraControls />
                 <ambientLight />
                 {/* <pointLight position={[10, 10, 10]} /> */}
-                <Suspense fallback={null}>
+                <Suspense fallback={
+                  <Html>
+                  <h1>
+                  Loading...
+                  </h1>
+                  </Html>
+                }>
                   <Scene URL = {'giraffes/small-batik'}  position={[1, 0, 0]} scale = {10}/>
                   <Scene URL = {'giraffes/large-standing'}  position={[2, 1, -2]} scale = {7} />
                   <Scene URL = {'giraffes/serenity'}  position={[3, 0, 0]} scale = {10}/>
@@ -128,10 +145,13 @@ export const IndexPageTemplate = ({
 
 IndexPageTemplate.propTypes = {
   description: PropTypes.string,
+  content: PropTypes.string,
+  contentComponent: PropTypes.func,
 };
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark;
+  const { markdownRemark: post } = data;
+
   const collectiblesList = [
     'etched-wood',
     'audubon-zoo-figurine',
@@ -170,7 +190,9 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        description={frontmatter.description}
+        description={post.frontmatter.description}
+        contentComponent={HTMLContent}
+        content={post.html}
         random={randomURL}
       />
     </Layout>
@@ -178,11 +200,7 @@ const IndexPage = ({ data }) => {
 };
 
 IndexPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
+  data: PropTypes.object.isRequired,
 };
 
 export default IndexPage;
@@ -190,6 +208,7 @@ export default IndexPage;
 export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
+      html
       frontmatter {
         description
       }
