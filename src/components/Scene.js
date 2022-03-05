@@ -54,14 +54,30 @@ export default function Scene({ ...props }) {
               
 
          />
-         <Html distanceFactor={5} center>
-           <div className ="annotation">
-           <Link to={siteURL}>{displayTitle}</Link>
-           </div>
-          </Html>
+          {props.animate
+          ?<></>
+          :<>
+          <Html distanceFactor={3} center>
+          <div className ="annotation">
+          <Link to={siteURL}>{displayTitle}</Link>
+          </div>
+         </Html>
+         </>}
 
           {hovered
-        ? <MeshWobbleMaterial attach="material" factor={0.5} speed={15} />
+        ? <>
+          {/* <MeshWobbleMaterial attach="material" factor={0.1} speed={15} /> */}
+          {props.animate
+          ?<>
+          <Html distanceFactor={5} center>
+          <div className ="annotation">
+          {displayTitle}
+          </div>
+          </Html>
+          </>
+          :<>
+         </>}
+          </>
         : <></>
       }
 
