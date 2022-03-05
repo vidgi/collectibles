@@ -6,6 +6,7 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import '@google/model-viewer/dist/model-viewer'
+import {Card, CardContent} from '@mui/material'
 
 // eslint-disable-next-line
 export const BlogPostTemplate = ({
@@ -37,6 +38,8 @@ export const BlogPostTemplate = ({
                 </ul>
               </div>
             ) : null}
+            <Card style={{ justifyContent: "center", padding:30}}>
+          <CardContent>
           <div className='has-text-weight-normal is-size-3'>
             {title}
           </div>
@@ -59,6 +62,9 @@ export const BlogPostTemplate = ({
               ></model-viewer>
             ) : null}
           </div>
+
+          
+
           <div className='has-text-weight-normal is-size-4'>
             about the collectible
           </div>
@@ -75,6 +81,8 @@ export const BlogPostTemplate = ({
           <div className='has-text-weight-normal is-size-6'>
             <PostContent content={content} />
           </div>
+          </CardContent>
+          </Card>
           <br></br>
           <br></br>
           <br></br>

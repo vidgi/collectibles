@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 // import { getImage } from "gatsby-plugin-image";
 import Content, { HTMLContent } from "../components/Content";
-import {PresentationControls, Loader } from "@react-three/drei"
+import { Loader } from "@react-three/drei"
+import {Card} from '@mui/material';
 
 import {
   Canvas,
@@ -39,10 +40,14 @@ const CameraControls = () => {
       ref={controls}
       args={[camera, domElement]}
       enableZoom={true}
+      enableRotate={true}
+      enableDamping={false}
+      enablePan={true}
       maxAzimuthAngle={Math.PI}
       maxPolarAngle={2*Math.PI}
       minAzimuthAngle={-Math.PI}
       minPolarAngle={0}
+      listenToKeyEvents={domElement}
     />
   );
 };
@@ -63,6 +68,7 @@ export const IndexPageTemplate = ({
           {/* <div className="section"> */}
             <div className="columns">
               <div className="column is-3">
+
                 <div className="content">
                   <div className="has-text-weight-normal is-size-6">
                   <PageContent className="content" content={content} />
@@ -70,39 +76,31 @@ export const IndexPageTemplate = ({
                 </div>
                 <div className="content">
                 <Link to={`/collectible/${random}`}>
-                <button className="button is-light has-text-weight-normal">
+                <button className="button has-text-weight-normal">
                     random collectible →
                   </button>  
                   </Link>
                   </div>
                   <div className="content">
                   <Link to={`/explorer`}>
-                <button className="button is-light has-text-weight-normal">
+                <button className="button has-text-weight-normal">
                     collectiblr explorer →
                   </button>  
                   </Link>
                   </div>
               </div>
               <div className="column">
+              <Card style={{ justifyContent: "center"}}>
+
               <div style={{ position: "relative", height: 500 }} className="margin-top-0">
               <Canvas dpr={[1, 2]}>
-                {/* <CameraControls /> */}
+                <CameraControls />
                 
                 
                 <ambientLight />
                 {/* <pointLight position={[10, 10, 10]} /> */}
                 <Suspense fallback={null}>
-                <PresentationControls
-                                  global={true} // Spin globally or by dragging the model
-                                  cursor={true} // Whether to toggle cursor style on drag
-                                  snap={false} // Snap-back to center (can also be a spring config)
-                                  speed={1} // Speed factor
-                                  zoom={1} // Zoom factor when half the polar-max is reached
-                                  rotation={[0, 0, 0]} // Default rotation
-                                  polar={[0, Math.PI / 2]} // Vertical limits
-                                  azimuth={[-Infinity, Infinity]} // Horizontal limits
-                                  config = {{ mass: 2, tension: 170, friction: 26 }} // Spring config
-                                >
+                
                   <Scene URL = {'giraffes/small-batik'}  position={[1, 0, 0]} scale = {10} animate={true}/>
                   <Scene URL = {'giraffes/large-standing'}  position={[2, 1, -2]} scale = {7} animate={true} />
                   <Scene URL = {'giraffes/serenity'}  position={[3, 0, 0]} scale = {10} animate={true}/>
@@ -134,8 +132,6 @@ export const IndexPageTemplate = ({
                   <Scene URL = {'mushrooms/ringless-honey-mushroom'}  position={[5, 2,-4 ]} scale = {5} animate={true}/>
                   <Scene URL = {'mushrooms/golden-milkcap'}  position={[7.5, 1, 0 ]} scale = {10} animate={true}/>
 
-                  </PresentationControls>
-
                 </Suspense>
 
                 
@@ -143,6 +139,7 @@ export const IndexPageTemplate = ({
               <Loader />
 
               </div>
+              </Card>
               </div>
             </div>
           {/* </div> */}

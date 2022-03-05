@@ -61,7 +61,7 @@ export default function Scene({ ...props }) {
           </Html>
 
           {hovered
-        ? <MeshWobbleMaterial attach="material" factor={1} speed={10} />
+        ? <MeshWobbleMaterial attach="material" factor={0.5} speed={15} />
         : <></>
       }
 

@@ -5,6 +5,8 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import '@google/model-viewer/dist/model-viewer'
 
+import {Card, CardContent} from '@mui/material';
+
 // eslint-disable-next-line
 export const AboutPageTemplate = ({ object, content, contentComponent }) => {
   const PageContent = contentComponent || Content
@@ -13,6 +15,8 @@ export const AboutPageTemplate = ({ object, content, contentComponent }) => {
     <section className='section section--gradient'>
       <div className='container content'>
       <div className='section'>
+      <Card style={{ justifyContent: "center", padding:30}}>
+          <CardContent>
         <div className='has-text-weight-normal is-size-4'>
           about
         </div>
@@ -20,6 +24,8 @@ export const AboutPageTemplate = ({ object, content, contentComponent }) => {
         <div className='has-text-weight-normal is-size-6'>
         <PageContent className="content" content={content} />
         </div>
+        </CardContent>
+          </Card>
         </div>
         {/* </div> */}
       </div>

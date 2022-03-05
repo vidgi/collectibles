@@ -2,6 +2,14 @@ import * as React from "react";
 import { Helmet } from "react-helmet";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
+import {Box, Grid, Card, CardContent, Typography, CardActionArea, CardMedia} from '@mui/material';
+
+const styles = {
+  media: {
+    height: '40vh',
+    objectFit: 'contain'
+  }
+};
 
 class TagRoute extends React.Component {
   render() {
@@ -11,28 +19,14 @@ class TagRoute extends React.Component {
 
     // const totalCount = this.props.data.allMarkdownRemark.totalCount;
     const tagHeader = <div><Link to={`/collections/`}>collections </Link> > {tag} </div>;
-
-    const postLinks = posts.map((post) => (
-      <li key={post.node.fields.slug}>
-        <Link to={post.node.fields.slug}>
-        <img
-        src={post.node.frontmatter.featuredimage}
-        style={{ height: 250}}
-        alt={post.node.frontmatter.title}
-        />
-        <h2 className="has-text-weight-normal is-size-6">{post.node.frontmatter.title}</h2>
-        </Link>
-      </li>
-    ));
    
     return (
       <Layout>
         <section className="section2 container content">
           <Helmet title={`${tag} | ${title}`} />
-          {/* <div className="container content"> */}
             <div className="columns">
               <div
-                className="column is-10"
+                className="column"
                 style={{ marginBottom: "6rem" }}
               >
                 <br></br>
@@ -43,10 +37,40 @@ class TagRoute extends React.Component {
                 <div className='has-text-weight-normal is-size-3'>
                   all {tag}
                 </div>
-                <ul className="taglist">{postLinks}</ul>
+                <br></br>
+
+                <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+
+{posts.map((post,index) => (
+  <Grid item xs={2} sm={4} md={4} key={index}>
+      <Card style={{ justifyContent: "center", display: "flex",padding:30 }}>
+      <CardActionArea>
+      <Link to={post.node.fields.slug}>
+      <CardMedia
+          component="img"
+          sx={styles.media}
+          image={post.node.frontmatter.featuredimage}
+          alt={post.node.frontmatter.title}
+        />
+      <CardContent>
+        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+          {tag.slice(0, -1).toUpperCase()} #{index+1}
+        </Typography>
+        <Typography variant="h6" component="div">
+         {post.node.frontmatter.title}
+        </Typography>
+      </CardContent>
+      </Link>
+      </CardActionArea>
+    </Card>
+  </Grid>
+  ))}
+  </Grid>
+  </Box>
+
               </div>
             </div>
-          {/* </div> */}
         </section>
       </Layout>
     );
