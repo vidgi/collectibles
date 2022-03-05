@@ -38,7 +38,7 @@ const TagsPage = ({
 
 {group.map((tag,index) => (
   <Grid item xs={2} sm={4} md={4} key={index}>
-      <Card style={{ justifyContent: "center", display: "flex", padding:30 }}>
+      <Card style={{ justifyContent: "center", display: "flex", padding:'1em'  }}>
       <CardActionArea>
       <Link to={`/collections/${kebabCase(tag.fieldValue)}/`}>
       <CardMedia

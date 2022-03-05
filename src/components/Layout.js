@@ -8,11 +8,12 @@ import { withPrefix } from "gatsby";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
+
 const theme = createTheme({
   typography: {
     fontFamily: `"Work Sans", "Helvetica", "Arial", sans-serif`
-   }
- })
+   },
+  });
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -23,7 +24,7 @@ const TemplateWrapper = ({ children }) => {
         <title>{title}</title>
         <meta name="description" content={description} />
         <link rel="shortcut icon" href={`${withPrefix("/")}img/favicon.ico`}/>
-        <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400,600,800" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Syne:200,400,600,800" rel="stylesheet"/>
         <link
           rel="apple-touch-icon"
           sizes="180x180"

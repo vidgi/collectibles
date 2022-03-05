@@ -38,11 +38,11 @@ export const BlogPostTemplate = ({
                 </ul>
               </div>
             ) : null}
-            <Card style={{ justifyContent: "center", padding:30}}>
-          <CardContent>
+            
           <div className='has-text-weight-normal is-size-3'>
             {title}
           </div>
+
           {/* <div className="columns"> */}
           {/* <div className="column is-10"> */}
           <div id='card'>
@@ -63,8 +63,9 @@ export const BlogPostTemplate = ({
             ) : null}
           </div>
 
-          
-
+          <br></br>
+          <Card style={{ justifyContent: "center", padding:'1em' }}>
+          <CardContent>
           <div className='has-text-weight-normal is-size-4'>
             about the collectible
           </div>

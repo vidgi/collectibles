@@ -15,7 +15,7 @@ export const AboutPageTemplate = ({ object, content, contentComponent }) => {
     <section className='section section--gradient'>
       <div className='container content'>
       <div className='section'>
-      <Card style={{ justifyContent: "center", padding:30}}>
+      <Card style={{ justifyContent: "center", padding:'1em' }}>
           <CardContent>
         <div className='has-text-weight-normal is-size-4'>
           about
