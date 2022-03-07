@@ -131,7 +131,7 @@ export const IndexPageTemplate = ({
                   <Scene URL = {'mushrooms/mulch-maids'}  position={[-1, 0, 0 ]} scale = {10} animate={true}/>
                   <Scene URL = {'mushrooms/ringless-honey-mushroom'}  position={[5, 2,-4 ]} scale = {5} animate={true}/>
                   <Scene URL = {'mushrooms/golden-milkcap'}  position={[7.5, 1, 0 ]} scale = {10} animate={true}/>
-
+                  
                 </Suspense>
 
                 
