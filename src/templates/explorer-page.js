@@ -117,8 +117,8 @@ export const ExplorerPageTemplate = ({
                   <Scene URL = {'plants/anthurium'}  position={[2, 3, -3 ]} scale = {5}/>
                   <Scene URL = {'plants/hong-gochu'}  position={[4.5, 3, -3 ]} scale = {5}/>
                   <Scene URL = {'plants/speckled-pothos'}  position={[-3, 4, -3 ]} scale = {5}/>
-                  <Scene URL = {'plants/fukien-tea-bonsai'}  position={[-1, 4, -3]} scale = {5}/>
-                  <Scene URL = {'plants/solid-green-spider-plant'}  position={[-2, 4, -3 ]} scale = {5}/>
+                  <Scene URL = {'plants/fukien-tea-bonsai'}  position={[0, 4, -3]} scale = {5}/>
+                  <Scene URL = {'plants/solid-green-spider-plant'}  position={[-1.5, 3.5, -3 ]} scale = {5}/>
                   
                 </Suspense>
 
