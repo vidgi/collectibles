@@ -131,12 +131,14 @@ export const IndexPageTemplate = ({
                   <Scene URL = {'mushrooms/mulch-maids'}  position={[-1, 0, 0 ]} scale = {10} animate={true}/>
                   <Scene URL = {'mushrooms/ringless-honey-mushroom'}  position={[5, 2,-4 ]} scale = {5} animate={true}/>
                   <Scene URL = {'mushrooms/golden-milkcap'}  position={[7.5, 1, 0 ]} scale = {10} animate={true}/>
-                  
                   <Scene URL = {'plants/anthurium'}  position={[2, 3, -3 ]} scale = {5} animate={true}/>
                   <Scene URL = {'plants/hong-gochu'}  position={[4.5, 3, -3 ]} scale = {5} animate={true}/>
                   <Scene URL = {'plants/speckled-pothos'}  position={[-3, 4, -3 ]} scale = {5} animate={true}/>
                   <Scene URL = {'plants/fukien-tea-bonsai'}  position={[0, 4, -3]} scale = {5} animate={true}/>
                   <Scene URL = {'plants/solid-green-spider-plant'}  position={[-1.5, 3.5, -3 ]} scale = {5} animate={true}/>
+
+                  <Scene URL = {'mushrooms/ganoderma-sessile'}  position={[6.5, 3, -3 ]} scale = {5} animate={true}/>
+                  <Scene URL = {'wildflowers/texas-bluebonnet'}  position={[4, 0, -0.5 ]} scale = {5} animate={true}/>
 
                 </Suspense>
 
@@ -197,7 +199,14 @@ const IndexPage = ({ data }) => {
     'unknown-zoo-figurine',
     'wheels',
     'yellow-painted-wood',
-    'yellow-puppet'];
+    'yellow-puppet',
+    'anthurium',
+    'hong-gochu',
+    'speckled-pothos',
+    'fukien-tea-bonsai',
+    'solid-green-spider-plant',
+    'ganoderma-sessile',
+    'texas-bluebonnet'];
 
   const random = Math.floor(Math.random() * collectiblesList.length);
   const randomURL = collectiblesList[random]

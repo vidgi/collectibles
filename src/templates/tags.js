@@ -35,7 +35,7 @@ class TagRoute extends React.Component {
                 </div>
                 <br></br>
                 <div className='has-text-weight-normal is-size-3'>
-                  all {tag}
+                  {tag.slice(0, -1)} collection
                 </div>
                 <br></br>
 
