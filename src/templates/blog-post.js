@@ -7,6 +7,7 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import '@google/model-viewer/dist/model-viewer'
 import {Card, CardContent} from '@mui/material'
+import TypeAnimation from 'react-type-animation';
 
 // eslint-disable-next-line
 export const BlogPostTemplate = ({
@@ -40,7 +41,12 @@ export const BlogPostTemplate = ({
             ) : null}
             
           <div className='has-text-weight-normal is-size-3'>
-            {title}
+            {/* {title} */}
+            <TypeAnimation
+                    cursor={true}
+                    sequence={['', 500, title]}
+                    className="has-text-weight-normal is-size-3"
+                  />
           </div>
 
           {/* <div className="columns"> */}

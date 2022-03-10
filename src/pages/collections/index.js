@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import { Link, graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import {Box, Grid, Card, CardContent, Typography, CardActionArea, CardMedia} from '@mui/material';
+import TypeAnimation from 'react-type-animation';
 
 const styles = {
   media: {
@@ -29,7 +30,11 @@ const TagsPage = ({
           >
             <br></br>
             <div className="has-text-weight-normal is-size-3">
-              all collections
+              <TypeAnimation
+                    cursor={true}
+                    sequence={['', 500, 'all collections']}
+                    className="has-text-weight-normal is-size-3"
+                  />
             </div>
             <br></br>
 

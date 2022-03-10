@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import {Box, Grid, Card, CardContent, Typography, CardActionArea, CardMedia} from '@mui/material';
+import TypeAnimation from 'react-type-animation';
 
 const styles = {
   media: {
@@ -19,7 +20,9 @@ class TagRoute extends React.Component {
 
     // const totalCount = this.props.data.allMarkdownRemark.totalCount;
     const tagHeader = <div><Link to={`/collections/`}>collections </Link> > {tag} </div>;
-   
+    const titleSingular = tag.slice(0, -1);
+    const collectionTitle = titleSingular.concat(' collection');
+
     return (
       <Layout>
         <section className="section2 container content">
@@ -35,7 +38,11 @@ class TagRoute extends React.Component {
                 </div>
                 <br></br>
                 <div className='has-text-weight-normal is-size-3'>
-                  {tag.slice(0, -1)} collection
+                  <TypeAnimation
+                    cursor={true}
+                    sequence={['', 500, collectionTitle]}
+                    className="has-text-weight-normal is-size-3"
+                  />
                 </div>
                 <br></br>
 

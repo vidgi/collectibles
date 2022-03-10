@@ -6,6 +6,7 @@ import Content, { HTMLContent } from '../components/Content'
 import '@google/model-viewer/dist/model-viewer'
 
 import {Card, CardContent} from '@mui/material';
+import TypeAnimation from 'react-type-animation';
 
 // eslint-disable-next-line
 export const AboutPageTemplate = ({ object, content, contentComponent }) => {
@@ -18,7 +19,11 @@ export const AboutPageTemplate = ({ object, content, contentComponent }) => {
       {/* <Card style={{ justifyContent: "center", padding:'1em' }}> */}
           {/* <CardContent> */}
         <div className='has-text-weight-normal is-size-4'>
-          about
+          <TypeAnimation
+                    cursor={true}
+                    sequence={['', 500, 'about']}
+                    className="has-text-weight-normal is-size-3"
+                  />
         </div>
         <br></br>
         <div className='has-text-weight-normal is-size-6'>

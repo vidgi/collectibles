@@ -5,6 +5,7 @@ import { Link, graphql } from "gatsby";
 import Content, { HTMLContent } from "../components/Content";
 import { Loader } from "@react-three/drei"
 import {Card} from '@mui/material';
+import TypeAnimation from 'react-type-animation';
 
 import {
   Canvas,
@@ -70,9 +71,14 @@ export const IndexPageTemplate = ({
               <div className="column is-3">
 
                 <div className="content">
-                  <div className="has-text-weight-normal is-size-6">
-                  <PageContent className="content" content={content} />
-                  </div>
+                  {/* <div className="has-text-weight-normal is-size-6"> */}
+                  {/* <PageContent className="content" content={content} /> */}
+                  <TypeAnimation
+                    cursor={false}
+                    sequence={['collectibles', 500, description]}
+                    className="has-text-weight-normal is-size-6"
+                  />
+                  {/* </div> */}
                 </div>
                 <div className="content">
                 <Link to={`/collectible/${random}`}>
