@@ -75,7 +75,7 @@ export const ExplorerPageTemplate = ({
                 // {/* </div> */}
               // {/* </div> */}
               // {/* <div className="column"> */}
-              <div style={{ width: '100%', height: '85%', position: 'absolute'}} className="full-width-image margin-top-0">
+              <div style={{ backgroundColor:"#c5ccb6", width: '100%', height: '85%', position: 'absolute'}} className="full-width-image margin-top-0">
               <Canvas dpr={[1, 2]}>
                 <CameraControls />
                 

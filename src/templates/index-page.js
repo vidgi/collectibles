@@ -90,7 +90,7 @@ export const IndexPageTemplate = ({
                   </div>
               </div>
               <div className="column">
-              <Card style={{ justifyContent: "center"}}>
+              <Card style={{ backgroundColor:"#c5ccb6", justifyContent: "center"}}>
 
               <div style={{ position: "relative", height: 500 }} className="margin-top-0">
               <Canvas dpr={[1, 2]}>

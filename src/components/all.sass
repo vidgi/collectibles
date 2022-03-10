@@ -1,5 +1,5 @@
 @import "~bulma/sass/utilities/initial-variables"
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:200,400,600,800)
+@import url(https://fonts.googleapis.com/css?family=VT323:200,400,600,800)
 @import url(https://fonts.googleapis.com/css?family=Syne+Mono:200,400,600,800)
 
 // Config vars
@@ -9,12 +9,15 @@
 $kaldi-red: #D64000
 $kaldi-red-invert: #fff
 
-$body-font: 'Work Sans', sans-serif
+$body-font: 'VT323', monospace
 
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
 $body-color: #333
 $black: #2b2523
+
+a
+  color: #778a4d !important
 
 .annotation
   text-align: center center
@@ -34,7 +37,7 @@ $black: #2b2523
   box-shadow: 5px 5px 24px -4px rgba(0,0,0,0.1)
 
 html
-  background-color: #f7f7f7 !important
+  background-color: #212121 !important
   width: 100% !important
   height: 100% !important
 
@@ -49,17 +52,18 @@ h1, h2, h3, h4
   
 body 
   font-family: $body-font !important
-  background-color: #f7f7f7 !important
+  color:#c5ccb6 !important
+  background-color: #212121 !important
   width: 100% !important
   height: 100% !important
   scrollbar-width: none
 
 .navbar .navbar-menu
   box-shadow: none !important
-  color: #484646 !important
+  color:#c5ccb6 !important
 
 .container navbar-brand
-  color: #484646 !important
+  color:#c5ccb6 !important
 
 .navbar-brand
   font-family: 'Syne Mono', sans-serif !important
@@ -69,7 +73,18 @@ body
 
 .navbar
   // border-bottom: 3px double #484646
-  background-color: #f7f7f7 !important
+  background-color: #212121 !important
+  color:#c5ccb6 !important
+
+.navbar-item
+  color: #c5ccb6 !important
+
+.navbar-item:hover
+  color: #778a4d !important
+
+.button
+  background-color: #212121 !important
+  color:#c5ccb6 !important
 
 
 .content .taglist
@@ -204,6 +219,10 @@ model-viewer#reveal
 +tablet-only
   .blog-list-item .featured-thumbnail
     flex-basis: 50%
+  .navbar-menu
+    background-color: #212121 !important
+  .navbar-item:hover
+    background-color: rgba(255, 255, 255, 0.8) !important
 
 +mobile
   .blog-list-item header
@@ -212,4 +231,7 @@ model-viewer#reveal
     text-align: center
     max-width: 70%
     margin: 0 0 1em
-
+  .navbar-menu
+    background-color: #212121 !important
+  .navbar-item:hover
+    background-color: rgba(255, 255, 255, 0.8) !important

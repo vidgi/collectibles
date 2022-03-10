@@ -11,8 +11,11 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const theme = createTheme({
   typography: {
-    fontFamily: `"Work Sans", "Helvetica", "Arial", sans-serif`
+    fontFamily: `"VT323", "Helvetica", "Arial", monospace`
    },
+   card: {
+     backgroundColor: '#c5ccb6 !important'
+  }
   });
 
 const TemplateWrapper = ({ children }) => {
@@ -24,7 +27,7 @@ const TemplateWrapper = ({ children }) => {
         <title>{title}</title>
         <meta name="description" content={description} />
         <link rel="shortcut icon" href={`${withPrefix("/")}img/favicon.ico`}/>
-        <link href="https://fonts.googleapis.com/css?family=Syne:200,400,600,800" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=VT323:200,400,600,800" rel="stylesheet"/>
         <link
           rel="apple-touch-icon"
           sizes="180x180"

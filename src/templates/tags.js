@@ -44,7 +44,7 @@ class TagRoute extends React.Component {
 
 {posts.map((post,index) => (
   <Grid item xs={2} sm={4} md={4} key={index}>
-      <Card style={{ justifyContent: "center", display: "flex",padding:'1em' }}>
+      <Card style={{ backgroundColor:"#dbd9c3",justifyContent: "center", display: "flex",padding:'1em' }}>
       <CardActionArea>
       <Link to={post.node.fields.slug}>
       <CardMedia
