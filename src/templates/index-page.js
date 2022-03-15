@@ -64,44 +64,15 @@ export const IndexPageTemplate = ({
   const PageContent = contentComponent || Content;
   return (
     <div>
-      <section className="section section--gradient">
-        <div className="container">
+      <section className="container section section--gradient">
+        {/* <div className="container"> */}
           {/* <div className="section"> */}
             <div className="columns">
-              <div className="column is-3">
-
-                <div className="content">
-                  {/* <div className="has-text-weight-normal is-size-6"> */}
-                  {/* <PageContent className="content" content={content} /> */}
-                  <TypeAnimation
-                    cursor={false}
-                    sequence={['collectibles', 500, description]}
-                    className="has-text-weight-normal is-size-6"
-                  />
-                  {/* </div> */}
-                </div>
-                <div className="content">
-                <Link to={`/collectible/${random}`}>
-                <button className="button has-text-weight-normal">
-                    random collectible →
-                  </button>  
-                  </Link>
-                  </div>
-                  <div className="content">
-                  <Link to={`/explorer`}>
-                <button className="button has-text-weight-normal">
-                    collectiblr explorer →
-                  </button>  
-                  </Link>
-                  </div>
-              </div>
               <div className="column">
               <Card style={{ backgroundColor:"#c5ccb6", justifyContent: "center"}}>
-
               <div style={{ position: "relative", height: 500 }} className="margin-top-0">
               <Canvas dpr={[1, 2]}>
                 <CameraControls />
-                
                 
                 <ambientLight />
                 {/* <pointLight position={[10, 10, 10]} /> */}
@@ -154,9 +125,56 @@ export const IndexPageTemplate = ({
               </div>
               </Card>
               </div>
+
+              <div className="column is-3">
+
+<div className="content">
+  {/* <div className="has-text-weight-normal is-size-6"> */}
+  {/* <PageContent className="content" content={content} /> */}
+  <TypeAnimation
+    cursor={false}
+    sequence={['collectibles', 500, description]}
+    className="has-text-weight-normal is-size-6"
+  />
+  {/* </div> */}
+</div>
+<div className="content">
+<Link to={`/collectible/${random}`}>
+<button className="button has-text-weight-normal">
+    random collectible →
+  </button>  
+  </Link>
+  </div>
+
+
+  <div className="content">
+  <Link to={`/collections`}>
+<button className="button has-text-weight-normal">
+    all collections →
+  </button>  
+  </Link>
+  </div>
+
+  <div className="content">
+  <Link to={`/explorer`}>
+<button className="button has-text-weight-normal">
+   explorer →
+  </button>  
+  </Link>
+  </div>
+
+  <div className="content">
+  <Link to={`/about`}>
+<button className="button has-text-weight-normal">
+    about →
+  </button>  
+  </Link>
+  </div>
+  
+</div>
             </div>
           {/* </div> */}
-        </div>
+        {/* </div> */}
       </section>
 
    

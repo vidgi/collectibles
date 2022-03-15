@@ -51,7 +51,7 @@ export const BlogPostTemplate = ({
 
           {/* <div className="columns"> */}
           {/* <div className="column is-10"> */}
-          <div id='card'>
+          <div id='card' style={{ backgroundColor:"#dbd9c3"}}>
             {typeof window !== 'undefined' ? (
               <model-viewer
                 id="reveal" 

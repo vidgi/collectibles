@@ -70,3 +70,15 @@ collections:
             }
           - { label: 'Object', name: 'object', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
+      - file: 'src/pages/workshop/index.md'
+        label: 'Workshop'
+        name: 'workshop'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'workshop-page',
+            }
+          - { label: 'Object', name: 'object', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }

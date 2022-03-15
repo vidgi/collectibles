@@ -4,6 +4,7 @@ import CMS from 'netlify-cms-app'
 
 import IndexPagePreview from './preview-templates/IndexPagePreview'
 import AboutPagePreview from './preview-templates/AboutPagePreview'
+import WorkshopPagePreview from './preview-templates/WorkshopPagePreview'
 import ExplorerPagePreview from './preview-templates/ExplorerPagePreview'
 import BlogPostPreview from './preview-templates/BlogPostPreview'
 
@@ -12,5 +13,6 @@ import BlogPostPreview from './preview-templates/BlogPostPreview'
 
 CMS.registerPreviewTemplate('index', IndexPagePreview)
 CMS.registerPreviewTemplate('about', AboutPagePreview)
+CMS.registerPreviewTemplate('workshop', WorkshopPagePreview)
 CMS.registerPreviewTemplate('explorer', ExplorerPagePreview)
 CMS.registerPreviewTemplate('collectible', BlogPostPreview)
