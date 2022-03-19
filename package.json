@@ -15,6 +15,7 @@
     "drei": "^2.2.21",
     "framer-motion": "^6.2.8",
     "gatsby": "^4.0.0",
+    "gatsby-plugin-google-gtag": "^4.3.0",
     "gatsby-plugin-image": "^2.0.0",
     "gatsby-plugin-netlify": "^3.14.0",
     "gatsby-plugin-netlify-cms": "^6.0.0",
