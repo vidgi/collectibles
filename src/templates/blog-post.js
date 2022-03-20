@@ -72,22 +72,13 @@ export const BlogPostTemplate = ({
           <br></br>
           {/* <Card style={{ backgroundColor:"#c5ccb6",justifyContent: "center", padding:'1em' }}>
           <CardContent> */}
-          {/* <div className='has-text-weight-normal is-size-4'>
+          <div className='has-text-weight-normal is-size-4'>
             about the collectible
           </div>
           <br></br>
           <div className='has-text-weight-normal is-size-6'>
-            {description} 
-          </div>
-
-          <br></br>
-          <div className='has-text-weight-normal is-size-4'>
-            more information
-          </div>
-          <br></br>
-          <div className='has-text-weight-normal is-size-6'>
             <PostContent content={content} />
-          </div> */}
+          </div>
           {/* </CardContent>
           </Card> */}
           <br></br>
