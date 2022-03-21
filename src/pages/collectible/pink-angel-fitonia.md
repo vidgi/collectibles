@@ -8,3 +8,4 @@ description: Brewing with a Chemex probably seems like a complicated, time-consu
 tags:
   - plants
 ---
+- [fitonia](https://www.thespruce.com/grow-fittonia-houseplants-indoors-1902486)

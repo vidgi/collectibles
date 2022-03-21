@@ -8,3 +8,9 @@ description: Brewing with a Chemex probably seems like a complicated, time-consu
 tags:
   - mushrooms
 ---
+
+This observation of *Ganoderma sessile* was found on a walk at Hermann Park, Houston, TX. 
+
+- [inaturalist observation](https://www.inaturalist.org/observations/108156059)
+- [ganoderma sessile on wikipedia](https://en.wikipedia.org/wiki/Ganoderma_sessile)
+- [ganoderma sessile on inaturalist](https://www.inaturalist.org/taxa/350821-Ganoderma-sessile)

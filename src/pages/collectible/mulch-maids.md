@@ -8,4 +8,8 @@ description: Brewing with a Chemex probably seems like a complicated, time-consu
 tags:
   - mushrooms
 ---
-.
+This observation of Mulch Maids (*Leratiomyces percevalii*) was found at Mount Diablo State Park,Clayton, CA.
+
+- [inaturalist observation](https://www.inaturalist.org/observations/104118377)
+- [leratiomyces percevalii on inaturalist](https://www.inaturalist.org/taxa/129323-Leratiomyces-percevalii)
+- [leratiomyces percevalii on mushroom expert](https://www.mushroomexpert.com/leratiomyces_percevalii.html)

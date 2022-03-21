@@ -8,3 +8,5 @@ description: Brewing with a Chemex probably seems like a complicated, time-consu
 tags:
   - plants
 ---
+- [epipremnum aureum](https://en.wikipedia.org/wiki/Epipremnum_aureum)
+- [pothos](https://www.thespruce.com/pothos-an-easy-to-grow-houseplant-1403154)

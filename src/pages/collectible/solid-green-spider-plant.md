@@ -8,3 +8,5 @@ description: Brewing with a Chemex probably seems like a complicated, time-consu
 tags:
   - plants
 ---
+- [chlorophytum comosum](https://en.wikipedia.org/wiki/Chlorophytum_comosum)
+- [spider plant](https://www.thespruce.com/spider-plants-chlorophytum-definition-1902773)

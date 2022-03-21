@@ -8,3 +8,4 @@ description: Brewing with a Chemex probably seems like a complicated, time-consu
 tags:
   - plants
 ---
+- [anthurium](https://www.thespruce.com/grow-anthurium-plants-1902738)

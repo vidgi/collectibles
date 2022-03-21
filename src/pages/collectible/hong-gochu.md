@@ -8,3 +8,5 @@ description: Brewing with a Chemex probably seems like a complicated, time-consu
 tags:
   - plants
 ---
+- [korean chili pepper](https://www.bonsaiempire.com/tree-species/carmona)
+- [korean chilies 101](http://bburikitchen.com/korean-chilies-101)

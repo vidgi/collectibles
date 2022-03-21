@@ -8,3 +8,4 @@ description: Brewing with a Chemex probably seems like a complicated, time-consu
 tags:
   - plants
 ---
+- [lucky bamboo](https://www.thespruce.com/growing-lucky-bamboo-1902994)

@@ -8,3 +8,8 @@ description: Brewing with a Chemex probably seems like a complicated, time-consu
 tags:
   - mushrooms
 ---
+This observation of Golden Milkcap (*Lactarius alnicola*) was found at Coyote Creek in San Jose, CA. There were so many milkcaps all along the trail :)
+
+- [inaturalist observation](https://www.inaturalist.org/observations/103996679)
+- [lactarius alnicola on wikipedia](https://en.wikipedia.org/wiki/Lactarius_alnicola)
+- [lactarius alnicola on inaturalist](https://www.inaturalist.org/taxa/54599-Lactarius-alnicola)

@@ -8,3 +8,4 @@ description: Brewing with a Chemex probably seems like a complicated, time-consu
 tags:
   - plants
 ---
+- [tradescantia zebrina](https://en.wikipedia.org/wiki/Tradescantia_zebrina)

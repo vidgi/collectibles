@@ -8,3 +8,4 @@ description: Brewing with a Chemex probably seems like a complicated, time-consu
 tags:
   - plants
 ---
+- [fukien tea tree bonsai](https://www.bonsaiempire.com/tree-species/carmona)

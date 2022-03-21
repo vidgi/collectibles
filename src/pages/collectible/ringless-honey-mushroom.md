@@ -8,3 +8,8 @@ description: Brewing with a Chemex probably seems like a complicated, time-consu
 tags:
   - mushrooms
 ---
+This observation of Ringless Honey Mushroom (*Desarmillaria caespitosa*) was found on Lovett Blvd in Houston, TX.
+
+- [inaturalist observation](https://www.inaturalist.org/observations/102110049)
+- [desarmillaria caespitosa on inaturalist](https://www.inaturalist.org/taxa/1238700-Desarmillaria-caespitosa)
+- [desarmillaria caespitosa publication](https://www.fs.usda.gov/treesearch/pubs/62672)
