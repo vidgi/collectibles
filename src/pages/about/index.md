@@ -9,14 +9,14 @@ object: /honey.glb
 Overall, the project is simultaneously an ode to collecting and an exploration of the identities we place in physical objects and digital data, both of which are abstractions of our thoughts and memories.
 
 
-collectiblr was created by Vidya Giri ([vidyagiri.com](http://vidyagiri.com))
+collectiblr was created by Vidya Giri ([vidyagiri.com](http://vidyagiri.com)){:target="_blank"}
 
 
 ## resources used
 
-- [gatsby/netlify](https://www.netlify.com/with/gatsby/)
-- [model-viewer](https://modelviewer.dev/)
-- [polycam](https://learn.poly.cam/)
-- [three.js](https://threejs.org/)
-- [react-three-fiber](https://github.com/pmndrs/react-three-fiber)
-- [drei](https://github.com/pmndrs/drei)
+- [gatsby/netlify](https://www.netlify.com/with/gatsby/){:target="_blank"}
+- [model-viewer](https://modelviewer.dev/){:target="_blank"}
+- [polycam](https://learn.poly.cam/){:target="_blank"}
+- [three.js](https://threejs.org/){:target="_blank"}
+- [react-three-fiber](https://github.com/pmndrs/react-three-fiber){:target="_blank"}
+- [drei](https://github.com/pmndrs/drei){:target="_blank"}
