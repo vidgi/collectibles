@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "collectiblr",
-    description:
-      "exploring collectibility and that which makes an object of value and interest",
+    description: "exploring collectibility and that which makes an object of value and interest",
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -44,6 +43,13 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+              rel: "noopener noreferrer",
+            },
+          },
+          {
             resolve: "gatsby-remark-relative-images",
             options: {
               name: "uploads",
@@ -78,12 +84,12 @@ module.exports = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          'G-WVTHL94C36', // Google Analytics / GA
+          "G-WVTHL94C36", // Google Analytics / GA
         ],
         // This object gets passed directly to the gtag config command
         // This config will be shared across all trackingIds
         gtagConfig: {
-          optimize_id: 'OPT_CONTAINER_ID',
+          optimize_id: "OPT_CONTAINER_ID",
           anonymize_ip: true,
           cookie_expires: 0,
         },
@@ -94,7 +100,7 @@ module.exports = {
           // Setting this parameter is also optional
           respectDNT: true,
           // Avoids sending pageview hits from custom paths
-          exclude: ['/admin/**'],
+          exclude: ["/admin/**"],
         },
       },
     },
