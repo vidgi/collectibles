@@ -1,16 +1,14 @@
 ---
-templateKey: 'about-page'
+templateKey: "about-page"
 path: /about
 object: /honey.glb
 ---
 
-*collectiblr* reflects on what makes something collectible, valuable, and worth remembering with consideration of the presumed permanence of data and the contrasting ephemerality of attention in the internet age. The *collectiblr* project, equipped with augmented reality and 3d capabilities, combines the nostalgia of collectible objects, observations, and memories in a speculative, virtual space. The work transports these physical forms into the digital, confronting viewers with thoughts on physicality, materialism, and past memories. 
+_collectiblr_ reflects on what makes something collectible, valuable, and worth remembering in the digital age. In creating this project, I reflected on the the presumed permanence of data and the contrasting ephemerality of attention in the internet age. Equipped with augmented reality and 3d capabilities, the project echoes the nostalgia of collectible objects, observations, and memories in a speculative, virtual space. Through this website, I have collected 3d scans of items that are significant to me: from giraffe figurines I have accumulated over the years to wildflowers and mushrooms I have found in the wild. To me, each object represents more than a physical form as they are attached to various moments, places, and people that I have known. Through this scanning process I can capture the traces of memories as digital files. I can remember forms that once existed in the world even as my mind may forget and move on.
 
-Overall, the project is simultaneously an ode to collecting and an exploration of the identities we place in physical objects and digital data, both of which are abstractions of our thoughts and memories.
+Overall, this project is simultaneously an ode to collecting and an exploration of the identities we place in physical objects and digital data, both of which are abstractions of our thoughts and memories.
 
-
-collectiblr was created by Vidya Giri ([vidyagiri.com](http://vidyagiri.com))
-
+my website: [vidyagiri.com](http://vidyagiri.com)
 
 ## resources used
 

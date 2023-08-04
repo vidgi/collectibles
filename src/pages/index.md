@@ -1,5 +1,8 @@
 ---
 templateKey: index-page
-description: collectibles are items worth far more than they are originally sold for, most commonly based on it's appraised rarity and popularity.
+description: reflecting on what makes something collectible, valuable, and worth remembering in the internet age through 3d scans of items that are significant to me
 ---
-*collectibles* are items worth far more than they are originally sold for, most commonly based on it's appraised rarity and popularity.
+
+reflecting on what makes something collectible, valuable, and worth remembering in the internet age
+
+on this website, i have made 3d scans of items that are significant to me from giraffe figurines i have accumulated over the years to found wildflowers and mushrooms from the wild.
